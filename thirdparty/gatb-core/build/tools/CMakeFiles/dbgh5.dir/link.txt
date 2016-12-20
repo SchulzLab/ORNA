@@ -1,0 +1,1 @@
+/usr/bin/c++    -msse2 -msse4.2 -mpopcnt    CMakeFiles/dbgh5.dir/dbgh5.cpp.o  -o ../bin/dbgh5 -rdynamic ../lib/libgatbcore.a -ldl -lpthread -lz ../lib/libhdf5.a -lm -lz -ldl 

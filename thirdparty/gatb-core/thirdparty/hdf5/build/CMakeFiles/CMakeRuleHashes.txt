@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+f4642e5c05ba01f5e4406d978008daf2 H5Tinit.c
+6ae6d75c891fffe4c65707aaed4194e4 H5lib_settings.c

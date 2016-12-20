@@ -1,0 +1,1 @@
+/usr/bin/c++    -msse2 -msse4.2 -mpopcnt    CMakeFiles/debruijn20.dir/debruijn/debruijn20.cpp.o  -o ../bin/debruijn20 -rdynamic ../lib/libgatbcore.a -ldl -lpthread -lz ../lib/libhdf5.a -lm -lz -ldl 

@@ -1,0 +1,1 @@
+/usr/bin/c++    -msse2 -msse4.2 -mpopcnt    CMakeFiles/storage6.dir/storage/storage6.cpp.o  -o ../bin/storage6 -rdynamic ../lib/libgatbcore.a -ldl -lpthread -lz ../lib/libhdf5.a -lm -lz -ldl 

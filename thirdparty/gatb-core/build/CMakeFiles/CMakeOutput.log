@@ -1,0 +1,2011 @@
+The system is: Linux - 4.4.27.1.amd64-smp - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/3.0.2/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/3.0.2/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2876715810/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2876715810.dir/build.make CMakeFiles/cmTryCompileExec2876715810.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2876715810.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2876715810.dir/testCCompiler.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec2876715810
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2876715810.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2876715810.dir/testCCompiler.c.o  -o cmTryCompileExec2876715810 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec82761505/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec82761505.dir/build.make CMakeFiles/cmTryCompileExec82761505.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec82761505.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec82761505.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.0/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec82761505
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec82761505.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTryCompileExec82761505.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec82761505 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.9/lto-wrapper
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Debian 4.9.2-10' --with-bugurl=file:///usr/share/doc/gcc-4.9/README.Bugs --enable-languages=c,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.9 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.9 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-4.9-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-4.9-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-4.9-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --with-arch-32=i586 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 4.9.2 (Debian 4.9.2-10) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.9/:/usr/lib/gcc/x86_64-linux-gnu/4.9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.9/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.9/:/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec82761505' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/4.9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/4.9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccHT0FCR.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec82761505 /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.9/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.9 -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../.. CMakeFiles/cmTryCompileExec82761505.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.9/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTryCompileExec82761505/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec82761505.dir/build.make CMakeFiles/cmTryCompileExec82761505.dir/build]
+  ignore line: [make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec82761505.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec82761505.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.0/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec82761505]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec82761505.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTryCompileExec82761505.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec82761505 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.9/lto-wrapper]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Debian 4.9.2-10' --with-bugurl=file:///usr/share/doc/gcc-4.9/README.Bugs --enable-languages=c,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.9 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.9 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-4.9-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-4.9-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-4.9-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --with-arch-32=i586 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.9.2 (Debian 4.9.2-10) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.9/:/usr/lib/gcc/x86_64-linux-gnu/4.9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.9/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.9/:/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec82761505' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/4.9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/4.9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccHT0FCR.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec82761505 /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.9/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.9 -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../.. CMakeFiles/cmTryCompileExec82761505.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.9/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.9/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.9/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/4.9/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccHT0FCR.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec82761505] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.9/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.9] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.9]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.9/../../..]
+    arg [CMakeFiles/cmTryCompileExec82761505.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.9/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/4.9] ==> [/usr/lib/gcc/x86_64-linux-gnu/4.9]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/4.9/../../..] ==> [/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/4.9;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit fwks: []
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec652166868/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec652166868.dir/build.make CMakeFiles/cmTryCompileExec652166868.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec652166868.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec652166868.dir/testCXXCompiler.cxx.o -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec652166868
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec652166868.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec652166868.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec652166868 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1272269238/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1272269238.dir/build.make CMakeFiles/cmTryCompileExec1272269238.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1272269238.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec1272269238.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.0/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec1272269238
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1272269238.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTryCompileExec1272269238.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec1272269238 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/usr/bin/c++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.9/lto-wrapper
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Debian 4.9.2-10' --with-bugurl=file:///usr/share/doc/gcc-4.9/README.Bugs --enable-languages=c,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.9 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.9 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-4.9-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-4.9-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-4.9-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --with-arch-32=i586 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 4.9.2 (Debian 4.9.2-10) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.9/:/usr/lib/gcc/x86_64-linux-gnu/4.9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.9/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.9/:/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1272269238' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/4.9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/4.9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccDpk2XW.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec1272269238 /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.9/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.9 -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../.. CMakeFiles/cmTryCompileExec1272269238.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.9/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTryCompileExec1272269238/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec1272269238.dir/build.make CMakeFiles/cmTryCompileExec1272269238.dir/build]
+  ignore line: [make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec1272269238.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec1272269238.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.0/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec1272269238]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1272269238.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTryCompileExec1272269238.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec1272269238 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.9/lto-wrapper]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Debian 4.9.2-10' --with-bugurl=file:///usr/share/doc/gcc-4.9/README.Bugs --enable-languages=c,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.9 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.9 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-4.9-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-4.9-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-4.9-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --with-arch-32=i586 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.9.2 (Debian 4.9.2-10) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.9/:/usr/lib/gcc/x86_64-linux-gnu/4.9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.9/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.9/:/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1272269238' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/4.9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/4.9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccDpk2XW.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec1272269238 /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.9/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.9 -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../.. CMakeFiles/cmTryCompileExec1272269238.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.9/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.9/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.9/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/4.9/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccDpk2XW.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec1272269238] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.9/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.9] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.9]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.9/../../..]
+    arg [CMakeFiles/cmTryCompileExec1272269238.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.9/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/4.9] ==> [/usr/lib/gcc/x86_64-linux-gnu/4.9]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/4.9/../../..] ==> [/usr/lib]
+  implicit libs: [stdc++;m;c]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/4.9;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit fwks: []
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec589103783/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec589103783.dir/build.make CMakeFiles/cmTryCompileExec589103783.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec589103783.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec589103783.dir/CheckIncludeFile.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec589103783
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec589103783.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec589103783.dir/CheckIncludeFile.c.o  -o cmTryCompileExec589103783 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2751942515/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2751942515.dir/build.make CMakeFiles/cmTryCompileExec2751942515.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2751942515.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2751942515.dir/CheckIncludeFile.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec2751942515
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2751942515.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2751942515.dir/CheckIncludeFile.c.o  -o cmTryCompileExec2751942515 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2687144063/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2687144063.dir/build.make CMakeFiles/cmTryCompileExec2687144063.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2687144063.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2687144063.dir/CheckIncludeFile.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec2687144063
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2687144063.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2687144063.dir/CheckIncludeFile.c.o  -o cmTryCompileExec2687144063 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of __uint128_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4278086568/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4278086568.dir/build.make CMakeFiles/cmTryCompileExec4278086568.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4278086568.dir/int128_t_USE__uint128_t.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec4278086568.dir/int128_t_USE__uint128_t.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/int128_t_USE__uint128_t.c
+Linking C executable cmTryCompileExec4278086568
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4278086568.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec4278086568.dir/int128_t_USE__uint128_t.c.o  -o cmTryCompileExec4278086568 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the CXX compiler has std namespace passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1228674396/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1228674396.dir/build.make CMakeFiles/cmTryCompileExec1228674396.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1228674396.dir/TestForSTDNamespace.cxx.o
+/usr/bin/c++    -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec1228674396.dir/TestForSTDNamespace.cxx.o -c /usr/share/cmake-3.0/Modules/TestForSTDNamespace.cxx
+Linking CXX executable cmTryCompileExec1228674396
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1228674396.dir/link.txt --verbose=1
+/usr/bin/c++    -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec1228674396.dir/TestForSTDNamespace.cxx.o  -o cmTryCompileExec1228674396 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function ceil exists in the m; passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2669022843/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2669022843.dir/build.make CMakeFiles/cmTryCompileExec2669022843.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2669022843.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=ceil   -o CMakeFiles/cmTryCompileExec2669022843.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘ceil’
+/usr/share/cmake-3.0/Modules/CheckFunctionExists.c:3:6: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+ char CHECK_FUNCTION_EXISTS();
+      ^
+Linking C executable cmTryCompileExec2669022843
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2669022843.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=ceil    CMakeFiles/cmTryCompileExec2669022843.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2669022843 -rdynamic -lm 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function dlopen exists in the dl;m passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec15166909/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec15166909.dir/build.make CMakeFiles/cmTryCompileExec15166909.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec15166909.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=dlopen   -o CMakeFiles/cmTryCompileExec15166909.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec15166909
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec15166909.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=dlopen    CMakeFiles/cmTryCompileExec15166909.dir/CheckFunctionExists.c.o  -o cmTryCompileExec15166909 -rdynamic -ldl -lm 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function gethostbyname exists in the c passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4162504203/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4162504203.dir/build.make CMakeFiles/cmTryCompileExec4162504203.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4162504203.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec4162504203.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4162504203
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4162504203.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec4162504203.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4162504203 -rdynamic -lc 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of unsigned short passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3384171805/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3384171805.dir/build.make CMakeFiles/cmTryCompileExec3384171805.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3384171805.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec3384171805.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/CMAKE_SIZEOF_UNSIGNED_SHORT.c
+Linking C executable cmTryCompileExec3384171805
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3384171805.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec3384171805.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o  -o cmTryCompileExec3384171805 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function difftime exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2171817532/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2171817532.dir/build.make CMakeFiles/cmTryCompileExec2171817532.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2171817532.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=difftime   -o CMakeFiles/cmTryCompileExec2171817532.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2171817532
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2171817532.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=difftime    CMakeFiles/cmTryCompileExec2171817532.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2171817532 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function clock_gettime exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2330803768/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2330803768.dir/build.make CMakeFiles/cmTryCompileExec2330803768.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2330803768.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=clock_gettime   -o CMakeFiles/cmTryCompileExec2330803768.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2330803768
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2330803768.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=clock_gettime    CMakeFiles/cmTryCompileExec2330803768.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2330803768 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function clock_gettime exists in the rt passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3396160688/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3396160688.dir/build.make CMakeFiles/cmTryCompileExec3396160688.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3396160688.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=clock_gettime   -o CMakeFiles/cmTryCompileExec3396160688.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3396160688
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3396160688.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=clock_gettime    CMakeFiles/cmTryCompileExec3396160688.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3396160688 -rdynamic -lrt -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files ;sys/resource.h exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec755012897/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec755012897.dir/build.make CMakeFiles/cmTryCompileExec755012897.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec755012897.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec755012897.dir/CheckIncludeFiles.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec755012897
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec755012897.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec755012897.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec755012897 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/resource.h;sys/time.h exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1059776554/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1059776554.dir/build.make CMakeFiles/cmTryCompileExec1059776554.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1059776554.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec1059776554.dir/CheckIncludeFiles.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec1059776554
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1059776554.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec1059776554.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec1059776554 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/resource.h;sys/time.h;unistd.h exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3782092659/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3782092659.dir/build.make CMakeFiles/cmTryCompileExec3782092659.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3782092659.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec3782092659.dir/CheckIncludeFiles.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec3782092659
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3782092659.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec3782092659.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec3782092659 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec549539211/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec549539211.dir/build.make CMakeFiles/cmTryCompileExec549539211.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec549539211.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec549539211.dir/CheckIncludeFiles.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec549539211
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec549539211.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec549539211.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec549539211 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec667282711/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec667282711.dir/build.make CMakeFiles/cmTryCompileExec667282711.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec667282711.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec667282711.dir/CheckIncludeFiles.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec667282711
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec667282711.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec667282711.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec667282711 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3114140951/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3114140951.dir/build.make CMakeFiles/cmTryCompileExec3114140951.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3114140951.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec3114140951.dir/CheckIncludeFiles.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec3114140951
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3114140951.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec3114140951.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec3114140951 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h;sys/types.h exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3939297143/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3939297143.dir/build.make CMakeFiles/cmTryCompileExec3939297143.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3939297143.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec3939297143.dir/CheckIncludeFiles.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec3939297143
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3939297143.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec3939297143.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec3939297143 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h;sys/types.h;stddef.h exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2046575063/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2046575063.dir/build.make CMakeFiles/cmTryCompileExec2046575063.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2046575063.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec2046575063.dir/CheckIncludeFiles.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec2046575063
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2046575063.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec2046575063.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec2046575063 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h;sys/types.h;stddef.h;setjmp.h exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2605709784/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2605709784.dir/build.make CMakeFiles/cmTryCompileExec2605709784.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2605709784.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec2605709784.dir/CheckIncludeFiles.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec2605709784
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2605709784.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec2605709784.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec2605709784 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h;sys/types.h;stddef.h;setjmp.h;features.h exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec798884866/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec798884866.dir/build.make CMakeFiles/cmTryCompileExec798884866.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec798884866.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec798884866.dir/CheckIncludeFiles.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec798884866
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec798884866.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec798884866.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec798884866 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h;sys/types.h;stddef.h;setjmp.h;features.h;dirent.h exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3881460317/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3881460317.dir/build.make CMakeFiles/cmTryCompileExec3881460317.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3881460317.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec3881460317.dir/CheckIncludeFiles.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec3881460317
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3881460317.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec3881460317.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec3881460317 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h;sys/types.h;stddef.h;setjmp.h;features.h;dirent.h;stdint.h exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2693323441/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2693323441.dir/build.make CMakeFiles/cmTryCompileExec2693323441.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2693323441.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec2693323441.dir/CheckIncludeFiles.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec2693323441
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2693323441.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec2693323441.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec2693323441 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2170450126/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2170450126.dir/build.make CMakeFiles/cmTryCompileExec2170450126.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2170450126.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec2170450126.dir/CheckIncludeFile.cxx.o -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTryCompileExec2170450126
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2170450126.dir/link.txt --verbose=1
+/usr/bin/c++    -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec2170450126.dir/CheckIncludeFile.cxx.o  -o cmTryCompileExec2170450126 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h;sys/types.h;stddef.h;setjmp.h;features.h;dirent.h;stdint.h;sys/timeb.h exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec674667370/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec674667370.dir/build.make CMakeFiles/cmTryCompileExec674667370.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec674667370.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec674667370.dir/CheckIncludeFiles.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec674667370
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec674667370.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec674667370.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec674667370 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h;sys/types.h;stddef.h;setjmp.h;features.h;dirent.h;stdint.h;sys/timeb.h;pthread.h exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec907404575/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec907404575.dir/build.make CMakeFiles/cmTryCompileExec907404575.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec907404575.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec907404575.dir/CheckIncludeFiles.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec907404575
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec907404575.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec907404575.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec907404575 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h;sys/types.h;stddef.h;setjmp.h;features.h;dirent.h;stdint.h;sys/timeb.h;pthread.h;string.h exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4224750805/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4224750805.dir/build.make CMakeFiles/cmTryCompileExec4224750805.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4224750805.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec4224750805.dir/CheckIncludeFiles.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec4224750805
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4224750805.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec4224750805.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec4224750805 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h;sys/types.h;stddef.h;setjmp.h;features.h;dirent.h;stdint.h;sys/timeb.h;pthread.h;string.h;strings.h exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec380438240/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec380438240.dir/build.make CMakeFiles/cmTryCompileExec380438240.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec380438240.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec380438240.dir/CheckIncludeFiles.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec380438240
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec380438240.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec380438240.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec380438240 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h;sys/types.h;stddef.h;setjmp.h;features.h;dirent.h;stdint.h;sys/timeb.h;pthread.h;string.h;strings.h;time.h exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2667615079/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2667615079.dir/build.make CMakeFiles/cmTryCompileExec2667615079.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2667615079.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec2667615079.dir/CheckIncludeFiles.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec2667615079
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2667615079.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec2667615079.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec2667615079 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h;sys/types.h;stddef.h;setjmp.h;features.h;dirent.h;stdint.h;sys/timeb.h;pthread.h;string.h;strings.h;time.h;stdlib.h exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2688939177/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2688939177.dir/build.make CMakeFiles/cmTryCompileExec2688939177.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2688939177.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec2688939177.dir/CheckIncludeFiles.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec2688939177
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2688939177.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec2688939177.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec2688939177 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h;sys/types.h;stddef.h;setjmp.h;features.h;dirent.h;stdint.h;sys/timeb.h;pthread.h;string.h;strings.h;time.h;stdlib.h;memory.h exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec822530379/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec822530379.dir/build.make CMakeFiles/cmTryCompileExec822530379.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec822530379.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec822530379.dir/CheckIncludeFiles.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec822530379
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec822530379.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec822530379.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec822530379 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h;sys/types.h;stddef.h;setjmp.h;features.h;dirent.h;stdint.h;sys/timeb.h;pthread.h;string.h;strings.h;time.h;stdlib.h;memory.h;dlfcn.h exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2163225214/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2163225214.dir/build.make CMakeFiles/cmTryCompileExec2163225214.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2163225214.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec2163225214.dir/CheckIncludeFiles.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec2163225214
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2163225214.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec2163225214.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec2163225214 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h;sys/types.h;stddef.h;setjmp.h;features.h;dirent.h;stdint.h;sys/timeb.h;pthread.h;string.h;strings.h;time.h;stdlib.h;memory.h;dlfcn.h;inttypes.h exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2366653032/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2366653032.dir/build.make CMakeFiles/cmTryCompileExec2366653032.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2366653032.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec2366653032.dir/CheckIncludeFiles.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec2366653032
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2366653032.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec2366653032.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec2366653032 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h;sys/types.h;stddef.h;setjmp.h;features.h;dirent.h;stdint.h;sys/timeb.h;pthread.h;string.h;strings.h;time.h;stdlib.h;memory.h;dlfcn.h;inttypes.h;netinet/in.h exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4047345088/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4047345088.dir/build.make CMakeFiles/cmTryCompileExec4047345088.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4047345088.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec4047345088.dir/CheckIncludeFiles.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec4047345088
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4047345088.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec4047345088.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec4047345088 -rdynamic 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function lseek64 exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec245910995/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec245910995.dir/build.make CMakeFiles/cmTryCompileExec245910995.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec245910995.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=lseek64   -o CMakeFiles/cmTryCompileExec245910995.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec245910995
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec245910995.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=lseek64    CMakeFiles/cmTryCompileExec245910995.dir/CheckFunctionExists.c.o  -o cmTryCompileExec245910995 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function fseeko64 exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec541141615/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec541141615.dir/build.make CMakeFiles/cmTryCompileExec541141615.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec541141615.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=fseeko64   -o CMakeFiles/cmTryCompileExec541141615.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec541141615
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec541141615.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=fseeko64    CMakeFiles/cmTryCompileExec541141615.dir/CheckFunctionExists.c.o  -o cmTryCompileExec541141615 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function ftello64 exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3354147905/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3354147905.dir/build.make CMakeFiles/cmTryCompileExec3354147905.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3354147905.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=ftello64   -o CMakeFiles/cmTryCompileExec3354147905.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3354147905
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3354147905.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=ftello64    CMakeFiles/cmTryCompileExec3354147905.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3354147905 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function ftruncate64 exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3871883363/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3871883363.dir/build.make CMakeFiles/cmTryCompileExec3871883363.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3871883363.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=ftruncate64   -o CMakeFiles/cmTryCompileExec3871883363.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3871883363
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3871883363.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=ftruncate64    CMakeFiles/cmTryCompileExec3871883363.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3871883363 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function fseeko exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1228424566/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1228424566.dir/build.make CMakeFiles/cmTryCompileExec1228424566.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1228424566.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=fseeko   -o CMakeFiles/cmTryCompileExec1228424566.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1228424566
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1228424566.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=fseeko    CMakeFiles/cmTryCompileExec1228424566.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1228424566 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function ftello exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2577314451/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2577314451.dir/build.make CMakeFiles/cmTryCompileExec2577314451.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2577314451.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=ftello   -o CMakeFiles/cmTryCompileExec2577314451.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2577314451
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2577314451.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=ftello    CMakeFiles/cmTryCompileExec2577314451.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2577314451 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function fstat64 exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1743555370/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1743555370.dir/build.make CMakeFiles/cmTryCompileExec1743555370.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1743555370.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=fstat64   -o CMakeFiles/cmTryCompileExec1743555370.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1743555370
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1743555370.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=fstat64    CMakeFiles/cmTryCompileExec1743555370.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1743555370 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function stat64 exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3015857377/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3015857377.dir/build.make CMakeFiles/cmTryCompileExec3015857377.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3015857377.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=stat64   -o CMakeFiles/cmTryCompileExec3015857377.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3015857377
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3015857377.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=stat64    CMakeFiles/cmTryCompileExec3015857377.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3015857377 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of char passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec157989603/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec157989603.dir/build.make CMakeFiles/cmTryCompileExec157989603.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec157989603.dir/H5_SIZEOF_CHAR.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec157989603.dir/H5_SIZEOF_CHAR.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_CHAR.c
+Linking C executable cmTryCompileExec157989603
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec157989603.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec157989603.dir/H5_SIZEOF_CHAR.c.o  -o cmTryCompileExec157989603 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of short passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4159870180/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4159870180.dir/build.make CMakeFiles/cmTryCompileExec4159870180.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4159870180.dir/H5_SIZEOF_SHORT.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec4159870180.dir/H5_SIZEOF_SHORT.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_SHORT.c
+Linking C executable cmTryCompileExec4159870180
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4159870180.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec4159870180.dir/H5_SIZEOF_SHORT.c.o  -o cmTryCompileExec4159870180 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of int passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec360824615/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec360824615.dir/build.make CMakeFiles/cmTryCompileExec360824615.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec360824615.dir/H5_SIZEOF_INT.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec360824615.dir/H5_SIZEOF_INT.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_INT.c
+Linking C executable cmTryCompileExec360824615
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec360824615.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec360824615.dir/H5_SIZEOF_INT.c.o  -o cmTryCompileExec360824615 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of unsigned passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1662818434/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1662818434.dir/build.make CMakeFiles/cmTryCompileExec1662818434.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1662818434.dir/H5_SIZEOF_UNSIGNED.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec1662818434.dir/H5_SIZEOF_UNSIGNED.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_UNSIGNED.c
+Linking C executable cmTryCompileExec1662818434
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1662818434.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec1662818434.dir/H5_SIZEOF_UNSIGNED.c.o  -o cmTryCompileExec1662818434 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of long passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1096241833/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1096241833.dir/build.make CMakeFiles/cmTryCompileExec1096241833.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1096241833.dir/H5_SIZEOF_LONG.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec1096241833.dir/H5_SIZEOF_LONG.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_LONG.c
+Linking C executable cmTryCompileExec1096241833
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1096241833.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec1096241833.dir/H5_SIZEOF_LONG.c.o  -o cmTryCompileExec1096241833 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of long long passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1936703906/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1936703906.dir/build.make CMakeFiles/cmTryCompileExec1936703906.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1936703906.dir/H5_SIZEOF_LONG_LONG.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec1936703906.dir/H5_SIZEOF_LONG_LONG.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_LONG_LONG.c
+Linking C executable cmTryCompileExec1936703906
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1936703906.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec1936703906.dir/H5_SIZEOF_LONG_LONG.c.o  -o cmTryCompileExec1936703906 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of float passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1080885598/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1080885598.dir/build.make CMakeFiles/cmTryCompileExec1080885598.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1080885598.dir/H5_SIZEOF_FLOAT.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec1080885598.dir/H5_SIZEOF_FLOAT.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_FLOAT.c
+Linking C executable cmTryCompileExec1080885598
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1080885598.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec1080885598.dir/H5_SIZEOF_FLOAT.c.o  -o cmTryCompileExec1080885598 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of double passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2345451817/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2345451817.dir/build.make CMakeFiles/cmTryCompileExec2345451817.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2345451817.dir/H5_SIZEOF_DOUBLE.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec2345451817.dir/H5_SIZEOF_DOUBLE.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_DOUBLE.c
+Linking C executable cmTryCompileExec2345451817
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2345451817.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec2345451817.dir/H5_SIZEOF_DOUBLE.c.o  -o cmTryCompileExec2345451817 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of long double passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2584441777/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2584441777.dir/build.make CMakeFiles/cmTryCompileExec2584441777.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2584441777.dir/H5_SIZEOF_LONG_DOUBLE.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec2584441777.dir/H5_SIZEOF_LONG_DOUBLE.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_LONG_DOUBLE.c
+Linking C executable cmTryCompileExec2584441777
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2584441777.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec2584441777.dir/H5_SIZEOF_LONG_DOUBLE.c.o  -o cmTryCompileExec2584441777 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of int8_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2815553545/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2815553545.dir/build.make CMakeFiles/cmTryCompileExec2815553545.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2815553545.dir/H5_SIZEOF_INT8_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec2815553545.dir/H5_SIZEOF_INT8_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_INT8_T.c
+Linking C executable cmTryCompileExec2815553545
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2815553545.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec2815553545.dir/H5_SIZEOF_INT8_T.c.o  -o cmTryCompileExec2815553545 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of uint8_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1394534617/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1394534617.dir/build.make CMakeFiles/cmTryCompileExec1394534617.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1394534617.dir/H5_SIZEOF_UINT8_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec1394534617.dir/H5_SIZEOF_UINT8_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_UINT8_T.c
+Linking C executable cmTryCompileExec1394534617
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1394534617.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec1394534617.dir/H5_SIZEOF_UINT8_T.c.o  -o cmTryCompileExec1394534617 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of int_least8_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec812591019/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec812591019.dir/build.make CMakeFiles/cmTryCompileExec812591019.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec812591019.dir/H5_SIZEOF_INT_LEAST8_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec812591019.dir/H5_SIZEOF_INT_LEAST8_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_INT_LEAST8_T.c
+Linking C executable cmTryCompileExec812591019
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec812591019.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec812591019.dir/H5_SIZEOF_INT_LEAST8_T.c.o  -o cmTryCompileExec812591019 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of uint_least8_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4281578121/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4281578121.dir/build.make CMakeFiles/cmTryCompileExec4281578121.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4281578121.dir/H5_SIZEOF_UINT_LEAST8_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec4281578121.dir/H5_SIZEOF_UINT_LEAST8_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_UINT_LEAST8_T.c
+Linking C executable cmTryCompileExec4281578121
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4281578121.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec4281578121.dir/H5_SIZEOF_UINT_LEAST8_T.c.o  -o cmTryCompileExec4281578121 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of int_fast8_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2248037065/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2248037065.dir/build.make CMakeFiles/cmTryCompileExec2248037065.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2248037065.dir/H5_SIZEOF_INT_FAST8_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec2248037065.dir/H5_SIZEOF_INT_FAST8_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_INT_FAST8_T.c
+Linking C executable cmTryCompileExec2248037065
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2248037065.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec2248037065.dir/H5_SIZEOF_INT_FAST8_T.c.o  -o cmTryCompileExec2248037065 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of uint_fast8_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1241529753/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1241529753.dir/build.make CMakeFiles/cmTryCompileExec1241529753.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1241529753.dir/H5_SIZEOF_UINT_FAST8_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec1241529753.dir/H5_SIZEOF_UINT_FAST8_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_UINT_FAST8_T.c
+Linking C executable cmTryCompileExec1241529753
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1241529753.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec1241529753.dir/H5_SIZEOF_UINT_FAST8_T.c.o  -o cmTryCompileExec1241529753 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of int16_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3025349732/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3025349732.dir/build.make CMakeFiles/cmTryCompileExec3025349732.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3025349732.dir/H5_SIZEOF_INT16_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec3025349732.dir/H5_SIZEOF_INT16_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_INT16_T.c
+Linking C executable cmTryCompileExec3025349732
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3025349732.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec3025349732.dir/H5_SIZEOF_INT16_T.c.o  -o cmTryCompileExec3025349732 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of uint16_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec601401724/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec601401724.dir/build.make CMakeFiles/cmTryCompileExec601401724.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec601401724.dir/H5_SIZEOF_UINT16_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec601401724.dir/H5_SIZEOF_UINT16_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_UINT16_T.c
+Linking C executable cmTryCompileExec601401724
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec601401724.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec601401724.dir/H5_SIZEOF_UINT16_T.c.o  -o cmTryCompileExec601401724 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of int_least16_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec429204102/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec429204102.dir/build.make CMakeFiles/cmTryCompileExec429204102.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec429204102.dir/H5_SIZEOF_INT_LEAST16_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec429204102.dir/H5_SIZEOF_INT_LEAST16_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_INT_LEAST16_T.c
+Linking C executable cmTryCompileExec429204102
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec429204102.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec429204102.dir/H5_SIZEOF_INT_LEAST16_T.c.o  -o cmTryCompileExec429204102 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of uint_least16_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4237980161/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4237980161.dir/build.make CMakeFiles/cmTryCompileExec4237980161.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4237980161.dir/H5_SIZEOF_UINT_LEAST16_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec4237980161.dir/H5_SIZEOF_UINT_LEAST16_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_UINT_LEAST16_T.c
+Linking C executable cmTryCompileExec4237980161
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4237980161.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec4237980161.dir/H5_SIZEOF_UINT_LEAST16_T.c.o  -o cmTryCompileExec4237980161 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of int_fast16_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3350791254/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3350791254.dir/build.make CMakeFiles/cmTryCompileExec3350791254.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3350791254.dir/H5_SIZEOF_INT_FAST16_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec3350791254.dir/H5_SIZEOF_INT_FAST16_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_INT_FAST16_T.c
+Linking C executable cmTryCompileExec3350791254
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3350791254.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec3350791254.dir/H5_SIZEOF_INT_FAST16_T.c.o  -o cmTryCompileExec3350791254 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of uint_fast16_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2798114627/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2798114627.dir/build.make CMakeFiles/cmTryCompileExec2798114627.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2798114627.dir/H5_SIZEOF_UINT_FAST16_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec2798114627.dir/H5_SIZEOF_UINT_FAST16_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_UINT_FAST16_T.c
+Linking C executable cmTryCompileExec2798114627
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2798114627.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec2798114627.dir/H5_SIZEOF_UINT_FAST16_T.c.o  -o cmTryCompileExec2798114627 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of int32_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3871848943/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3871848943.dir/build.make CMakeFiles/cmTryCompileExec3871848943.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3871848943.dir/H5_SIZEOF_INT32_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec3871848943.dir/H5_SIZEOF_INT32_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_INT32_T.c
+Linking C executable cmTryCompileExec3871848943
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3871848943.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec3871848943.dir/H5_SIZEOF_INT32_T.c.o  -o cmTryCompileExec3871848943 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of uint32_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3205036963/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3205036963.dir/build.make CMakeFiles/cmTryCompileExec3205036963.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3205036963.dir/H5_SIZEOF_UINT32_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec3205036963.dir/H5_SIZEOF_UINT32_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_UINT32_T.c
+Linking C executable cmTryCompileExec3205036963
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3205036963.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec3205036963.dir/H5_SIZEOF_UINT32_T.c.o  -o cmTryCompileExec3205036963 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of int_least32_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1683731427/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1683731427.dir/build.make CMakeFiles/cmTryCompileExec1683731427.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1683731427.dir/H5_SIZEOF_INT_LEAST32_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec1683731427.dir/H5_SIZEOF_INT_LEAST32_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_INT_LEAST32_T.c
+Linking C executable cmTryCompileExec1683731427
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1683731427.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec1683731427.dir/H5_SIZEOF_INT_LEAST32_T.c.o  -o cmTryCompileExec1683731427 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of uint_least32_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2173927842/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2173927842.dir/build.make CMakeFiles/cmTryCompileExec2173927842.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2173927842.dir/H5_SIZEOF_UINT_LEAST32_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec2173927842.dir/H5_SIZEOF_UINT_LEAST32_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_UINT_LEAST32_T.c
+Linking C executable cmTryCompileExec2173927842
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2173927842.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec2173927842.dir/H5_SIZEOF_UINT_LEAST32_T.c.o  -o cmTryCompileExec2173927842 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of int_fast32_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2025525508/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2025525508.dir/build.make CMakeFiles/cmTryCompileExec2025525508.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2025525508.dir/H5_SIZEOF_INT_FAST32_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec2025525508.dir/H5_SIZEOF_INT_FAST32_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_INT_FAST32_T.c
+Linking C executable cmTryCompileExec2025525508
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2025525508.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec2025525508.dir/H5_SIZEOF_INT_FAST32_T.c.o  -o cmTryCompileExec2025525508 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of uint_fast32_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec718245865/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec718245865.dir/build.make CMakeFiles/cmTryCompileExec718245865.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec718245865.dir/H5_SIZEOF_UINT_FAST32_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec718245865.dir/H5_SIZEOF_UINT_FAST32_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_UINT_FAST32_T.c
+Linking C executable cmTryCompileExec718245865
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec718245865.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec718245865.dir/H5_SIZEOF_UINT_FAST32_T.c.o  -o cmTryCompileExec718245865 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of int64_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec41605995/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec41605995.dir/build.make CMakeFiles/cmTryCompileExec41605995.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec41605995.dir/H5_SIZEOF_INT64_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec41605995.dir/H5_SIZEOF_INT64_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_INT64_T.c
+Linking C executable cmTryCompileExec41605995
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec41605995.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec41605995.dir/H5_SIZEOF_INT64_T.c.o  -o cmTryCompileExec41605995 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of uint64_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1269216680/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1269216680.dir/build.make CMakeFiles/cmTryCompileExec1269216680.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1269216680.dir/H5_SIZEOF_UINT64_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec1269216680.dir/H5_SIZEOF_UINT64_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_UINT64_T.c
+Linking C executable cmTryCompileExec1269216680
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1269216680.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec1269216680.dir/H5_SIZEOF_UINT64_T.c.o  -o cmTryCompileExec1269216680 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of int_least64_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec248297732/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec248297732.dir/build.make CMakeFiles/cmTryCompileExec248297732.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec248297732.dir/H5_SIZEOF_INT_LEAST64_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec248297732.dir/H5_SIZEOF_INT_LEAST64_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_INT_LEAST64_T.c
+Linking C executable cmTryCompileExec248297732
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec248297732.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec248297732.dir/H5_SIZEOF_INT_LEAST64_T.c.o  -o cmTryCompileExec248297732 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of uint_least64_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3338972614/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3338972614.dir/build.make CMakeFiles/cmTryCompileExec3338972614.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3338972614.dir/H5_SIZEOF_UINT_LEAST64_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec3338972614.dir/H5_SIZEOF_UINT_LEAST64_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_UINT_LEAST64_T.c
+Linking C executable cmTryCompileExec3338972614
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3338972614.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec3338972614.dir/H5_SIZEOF_UINT_LEAST64_T.c.o  -o cmTryCompileExec3338972614 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of int_fast64_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3281561336/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3281561336.dir/build.make CMakeFiles/cmTryCompileExec3281561336.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3281561336.dir/H5_SIZEOF_INT_FAST64_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec3281561336.dir/H5_SIZEOF_INT_FAST64_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_INT_FAST64_T.c
+Linking C executable cmTryCompileExec3281561336
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3281561336.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec3281561336.dir/H5_SIZEOF_INT_FAST64_T.c.o  -o cmTryCompileExec3281561336 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of uint_fast64_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2697607506/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2697607506.dir/build.make CMakeFiles/cmTryCompileExec2697607506.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2697607506.dir/H5_SIZEOF_UINT_FAST64_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec2697607506.dir/H5_SIZEOF_UINT_FAST64_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_UINT_FAST64_T.c
+Linking C executable cmTryCompileExec2697607506
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2697607506.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec2697607506.dir/H5_SIZEOF_UINT_FAST64_T.c.o  -o cmTryCompileExec2697607506 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of size_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1856138389/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1856138389.dir/build.make CMakeFiles/cmTryCompileExec1856138389.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1856138389.dir/H5_SIZEOF_SIZE_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec1856138389.dir/H5_SIZEOF_SIZE_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_SIZE_T.c
+Linking C executable cmTryCompileExec1856138389
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1856138389.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec1856138389.dir/H5_SIZEOF_SIZE_T.c.o  -o cmTryCompileExec1856138389 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of ssize_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2680718896/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2680718896.dir/build.make CMakeFiles/cmTryCompileExec2680718896.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2680718896.dir/H5_SIZEOF_SSIZE_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec2680718896.dir/H5_SIZEOF_SSIZE_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_SSIZE_T.c
+Linking C executable cmTryCompileExec2680718896
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2680718896.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec2680718896.dir/H5_SIZEOF_SSIZE_T.c.o  -o cmTryCompileExec2680718896 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of ptrdiff_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec616293422/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec616293422.dir/build.make CMakeFiles/cmTryCompileExec616293422.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec616293422.dir/H5_SIZEOF_PTRDIFF_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec616293422.dir/H5_SIZEOF_PTRDIFF_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_PTRDIFF_T.c
+Linking C executable cmTryCompileExec616293422
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec616293422.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec616293422.dir/H5_SIZEOF_PTRDIFF_T.c.o  -o cmTryCompileExec616293422 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of off_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec44012871/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec44012871.dir/build.make CMakeFiles/cmTryCompileExec44012871.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec44012871.dir/H5_SIZEOF_OFF_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec44012871.dir/H5_SIZEOF_OFF_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_OFF_T.c
+Linking C executable cmTryCompileExec44012871
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec44012871.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec44012871.dir/H5_SIZEOF_OFF_T.c.o  -o cmTryCompileExec44012871 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of off64_t passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec812192375/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec812192375.dir/build.make CMakeFiles/cmTryCompileExec812192375.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec812192375.dir/H5_SIZEOF_OFF64_T.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec812192375.dir/H5_SIZEOF_OFF64_T.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CheckTypeSize/H5_SIZEOF_OFF64_T.c
+Linking C executable cmTryCompileExec812192375
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec812192375.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec812192375.dir/H5_SIZEOF_OFF64_T.c.o  -o cmTryCompileExec812192375 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function ioctl exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3669841428/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3669841428.dir/build.make CMakeFiles/cmTryCompileExec3669841428.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3669841428.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=ioctl   -o CMakeFiles/cmTryCompileExec3669841428.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3669841428
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3669841428.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=ioctl    CMakeFiles/cmTryCompileExec3669841428.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3669841428 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the TIOCGWINSZ exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2909032927/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2909032927.dir/build.make CMakeFiles/cmTryCompileExec2909032927.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2909032927.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec2909032927.dir/CheckSymbolExists.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2909032927
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2909032927.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec2909032927.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2909032927 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+File /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/ioctl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef TIOCGWINSZ
+  return ((int*)(&TIOCGWINSZ))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the TIOCGETD exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1049422047/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1049422047.dir/build.make CMakeFiles/cmTryCompileExec1049422047.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1049422047.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec1049422047.dir/CheckSymbolExists.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec1049422047
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1049422047.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec1049422047.dir/CheckSymbolExists.c.o  -o cmTryCompileExec1049422047 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+File /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/ioctl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef TIOCGETD
+  return ((int*)(&TIOCGETD))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function alarm exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4052970080/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4052970080.dir/build.make CMakeFiles/cmTryCompileExec4052970080.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4052970080.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=alarm   -o CMakeFiles/cmTryCompileExec4052970080.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4052970080
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4052970080.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=alarm    CMakeFiles/cmTryCompileExec4052970080.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4052970080 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function fork exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3146645988/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3146645988.dir/build.make CMakeFiles/cmTryCompileExec3146645988.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3146645988.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=fork   -o CMakeFiles/cmTryCompileExec3146645988.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘fork’
+/usr/share/cmake-3.0/Modules/CheckFunctionExists.c:3:6: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+ char CHECK_FUNCTION_EXISTS();
+      ^
+Linking C executable cmTryCompileExec3146645988
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3146645988.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=fork    CMakeFiles/cmTryCompileExec3146645988.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3146645988 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function frexpf exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3598652685/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3598652685.dir/build.make CMakeFiles/cmTryCompileExec3598652685.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3598652685.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=frexpf   -o CMakeFiles/cmTryCompileExec3598652685.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘frexpf’
+/usr/share/cmake-3.0/Modules/CheckFunctionExists.c:3:6: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+ char CHECK_FUNCTION_EXISTS();
+      ^
+Linking C executable cmTryCompileExec3598652685
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3598652685.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=frexpf    CMakeFiles/cmTryCompileExec3598652685.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3598652685 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function frexpl exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec585092958/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec585092958.dir/build.make CMakeFiles/cmTryCompileExec585092958.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec585092958.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=frexpl   -o CMakeFiles/cmTryCompileExec585092958.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘frexpl’
+/usr/share/cmake-3.0/Modules/CheckFunctionExists.c:3:6: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+ char CHECK_FUNCTION_EXISTS();
+      ^
+Linking C executable cmTryCompileExec585092958
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec585092958.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=frexpl    CMakeFiles/cmTryCompileExec585092958.dir/CheckFunctionExists.c.o  -o cmTryCompileExec585092958 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function gethostname exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3046618087/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3046618087.dir/build.make CMakeFiles/cmTryCompileExec3046618087.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3046618087.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=gethostname   -o CMakeFiles/cmTryCompileExec3046618087.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3046618087
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3046618087.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=gethostname    CMakeFiles/cmTryCompileExec3046618087.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3046618087 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function getpwuid exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2752852142/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2752852142.dir/build.make CMakeFiles/cmTryCompileExec2752852142.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2752852142.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=getpwuid   -o CMakeFiles/cmTryCompileExec2752852142.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2752852142
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2752852142.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=getpwuid    CMakeFiles/cmTryCompileExec2752852142.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2752852142 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function getrusage exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1776796961/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1776796961.dir/build.make CMakeFiles/cmTryCompileExec1776796961.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1776796961.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=getrusage   -o CMakeFiles/cmTryCompileExec1776796961.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1776796961
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1776796961.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=getrusage    CMakeFiles/cmTryCompileExec1776796961.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1776796961 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function lstat exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3408825895/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3408825895.dir/build.make CMakeFiles/cmTryCompileExec3408825895.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3408825895.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=lstat   -o CMakeFiles/cmTryCompileExec3408825895.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3408825895
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3408825895.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=lstat    CMakeFiles/cmTryCompileExec3408825895.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3408825895 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function rand_r exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3020512369/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3020512369.dir/build.make CMakeFiles/cmTryCompileExec3020512369.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3020512369.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=rand_r   -o CMakeFiles/cmTryCompileExec3020512369.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3020512369
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3020512369.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=rand_r    CMakeFiles/cmTryCompileExec3020512369.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3020512369 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function random exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4187439933/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4187439933.dir/build.make CMakeFiles/cmTryCompileExec4187439933.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4187439933.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=random   -o CMakeFiles/cmTryCompileExec4187439933.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4187439933
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4187439933.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=random    CMakeFiles/cmTryCompileExec4187439933.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4187439933 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function signal exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4152790812/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4152790812.dir/build.make CMakeFiles/cmTryCompileExec4152790812.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4152790812.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=signal   -o CMakeFiles/cmTryCompileExec4152790812.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4152790812
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4152790812.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=signal    CMakeFiles/cmTryCompileExec4152790812.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4152790812 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function longjmp exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3415389711/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3415389711.dir/build.make CMakeFiles/cmTryCompileExec3415389711.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3415389711.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=longjmp   -o CMakeFiles/cmTryCompileExec3415389711.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3415389711
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3415389711.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=longjmp    CMakeFiles/cmTryCompileExec3415389711.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3415389711 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function setjmp exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec83680186/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec83680186.dir/build.make CMakeFiles/cmTryCompileExec83680186.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec83680186.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=setjmp   -o CMakeFiles/cmTryCompileExec83680186.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec83680186
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec83680186.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=setjmp    CMakeFiles/cmTryCompileExec83680186.dir/CheckFunctionExists.c.o  -o cmTryCompileExec83680186 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function siglongjmp exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3918113465/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3918113465.dir/build.make CMakeFiles/cmTryCompileExec3918113465.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3918113465.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=siglongjmp   -o CMakeFiles/cmTryCompileExec3918113465.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3918113465
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3918113465.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=siglongjmp    CMakeFiles/cmTryCompileExec3918113465.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3918113465 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function sigaction exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec625975843/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec625975843.dir/build.make CMakeFiles/cmTryCompileExec625975843.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec625975843.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=sigaction   -o CMakeFiles/cmTryCompileExec625975843.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec625975843
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec625975843.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=sigaction    CMakeFiles/cmTryCompileExec625975843.dir/CheckFunctionExists.c.o  -o cmTryCompileExec625975843 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function sigprocmask exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3613603350/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3613603350.dir/build.make CMakeFiles/cmTryCompileExec3613603350.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3613603350.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=sigprocmask   -o CMakeFiles/cmTryCompileExec3613603350.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3613603350
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3613603350.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=sigprocmask    CMakeFiles/cmTryCompileExec3613603350.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3613603350 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function snprintf exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1286894072/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1286894072.dir/build.make CMakeFiles/cmTryCompileExec1286894072.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1286894072.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=snprintf   -o CMakeFiles/cmTryCompileExec1286894072.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘snprintf’
+/usr/share/cmake-3.0/Modules/CheckFunctionExists.c:3:6: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+ char CHECK_FUNCTION_EXISTS();
+      ^
+Linking C executable cmTryCompileExec1286894072
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1286894072.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=snprintf    CMakeFiles/cmTryCompileExec1286894072.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1286894072 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function srandom exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec890154268/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec890154268.dir/build.make CMakeFiles/cmTryCompileExec890154268.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec890154268.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=srandom   -o CMakeFiles/cmTryCompileExec890154268.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec890154268
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec890154268.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=srandom    CMakeFiles/cmTryCompileExec890154268.dir/CheckFunctionExists.c.o  -o cmTryCompileExec890154268 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strdup exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec662475874/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec662475874.dir/build.make CMakeFiles/cmTryCompileExec662475874.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec662475874.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=strdup   -o CMakeFiles/cmTryCompileExec662475874.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘strdup’
+/usr/share/cmake-3.0/Modules/CheckFunctionExists.c:3:6: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+ char CHECK_FUNCTION_EXISTS();
+      ^
+Linking C executable cmTryCompileExec662475874
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec662475874.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=strdup    CMakeFiles/cmTryCompileExec662475874.dir/CheckFunctionExists.c.o  -o cmTryCompileExec662475874 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function symlink exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4293273101/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4293273101.dir/build.make CMakeFiles/cmTryCompileExec4293273101.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4293273101.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=symlink   -o CMakeFiles/cmTryCompileExec4293273101.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4293273101
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4293273101.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=symlink    CMakeFiles/cmTryCompileExec4293273101.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4293273101 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function system exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3405134357/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3405134357.dir/build.make CMakeFiles/cmTryCompileExec3405134357.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3405134357.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=system   -o CMakeFiles/cmTryCompileExec3405134357.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3405134357
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3405134357.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=system    CMakeFiles/cmTryCompileExec3405134357.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3405134357 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function vasprintf exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4037177770/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4037177770.dir/build.make CMakeFiles/cmTryCompileExec4037177770.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4037177770.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=vasprintf   -o CMakeFiles/cmTryCompileExec4037177770.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4037177770
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4037177770.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=vasprintf    CMakeFiles/cmTryCompileExec4037177770.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4037177770 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function waitpid exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2917565963/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2917565963.dir/build.make CMakeFiles/cmTryCompileExec2917565963.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2917565963.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=waitpid   -o CMakeFiles/cmTryCompileExec2917565963.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2917565963
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2917565963.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=waitpid    CMakeFiles/cmTryCompileExec2917565963.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2917565963 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function vsnprintf exists passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2570790935/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2570790935.dir/build.make CMakeFiles/cmTryCompileExec2570790935.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2570790935.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=vsnprintf   -o CMakeFiles/cmTryCompileExec2570790935.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘vsnprintf’
+/usr/share/cmake-3.0/Modules/CheckFunctionExists.c:3:6: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+ char CHECK_FUNCTION_EXISTS();
+      ^
+Linking C executable cmTryCompileExec2570790935
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2570790935.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt -DCHECK_FUNCTION_EXISTS=vsnprintf    CMakeFiles/cmTryCompileExec2570790935.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2570790935 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the sigsetjmp exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1006134736/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1006134736.dir/build.make CMakeFiles/cmTryCompileExec1006134736.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1006134736.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec1006134736.dir/CheckSymbolExists.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec1006134736
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1006134736.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec1006134736.dir/CheckSymbolExists.c.o  -o cmTryCompileExec1006134736 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+File /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <setjmp.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef sigsetjmp
+  return ((int*)(&sigsetjmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the tzname exist passed with the following output:
+Change Dir: /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2707817629/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2707817629.dir/build.make CMakeFiles/cmTryCompileExec2707817629.dir/build
+make[1]: Entering directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2707817629.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_BSD_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -msse2 -msse4.2 -mpopcnt    -o CMakeFiles/cmTryCompileExec2707817629.dir/CheckSymbolExists.c.o   -c /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2707817629
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2707817629.dir/link.txt --verbose=1
+/usr/bin/cc   -msse2 -msse4.2 -mpopcnt     CMakeFiles/cmTryCompileExec2707817629.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2707817629 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp'
+
+File /MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <time.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef tzname
+  return ((int*)(&tzname))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
