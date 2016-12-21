@@ -33,7 +33,7 @@ int main (int argc, char* argv[])
         IBank* outBank = new BankFasta (out_file);
 
         //Creating a graph and an iterator. from the parameters. The threshold value is kept as the minimum abundance parameter of the graph. kmer size is the actual kmer+1
-        Graph graph = Graph::create (Bank::open(argv[1]), "-kmer-size %s -abundance-min %s", argv[4], argv[3]);
+        Graph graph = Graph::create (Bank::open(argv[1]), "-kmer-size %s -abundance-min 2", argv[4]);
         Graph::Iterator<Node> it = graph.iterator();
 
         int node_size= it.size();
@@ -52,15 +52,59 @@ int main (int argc, char* argv[])
 	//for (itSeq.first(); !itSeq.isDone(); itSeq.next())
 	{
 		auto acceptance=0;
-		int nflag=0;
-		double nc [5] = {0,0,0,0,0};   
+		int stretch=0;
+		int position = 0;
+		int numerror=0;
 		//itKmer.setData (itSeq->getData());
+		int length = seq.getDataSize();
+		int startkmer = 0;
+		int endkmer = 0;		
+		int flag=1;	
+		
 		Kmer<>::ModelCanonical model (kmer);
         	Kmer<>::ModelCanonical::Iterator itKmer (model);
-		if(nflag==0){
-			itKmer.setData (seq.getData());
-		
-		    	//Data& data = itSeq.item().getData();
+		itKmer.setData (seq.getData());
+
+		//Error Correction	
+		for(itKmer.first(); !itKmer.isDone(); itKmer.next())
+		{
+			std::string ts = model.toString (itKmer->value());
+			const char* tsq = ts.c_str();
+			
+			Node tnode = graph.buildNode(tsq);
+			if(!(graph.contains(tnode)) && (startkmer==1))
+			{
+				stretch+=1;
+				position+=1;			
+			}
+			else
+			{
+				if(position==0)
+				{
+					startkmer=1;
+				}
+				if(position == (length-kmer))
+				{
+					endkmer=1;
+				}
+				if(stretch==kmer)
+				{	
+					if((startkmer==1)){
+						numerror=1;
+					}
+				}
+				stretch=0;
+				position+=1;
+			}
+		}
+		if(numerror==1)
+		{
+			if(endkmer==1)
+			{
+				flag=0;
+			}
+		}
+		if(flag==1){
 			//Iterating over kmers in each sequence
 			for (itKmer.first(); !itKmer.isDone(); itKmer.next())
 			{
@@ -69,29 +113,27 @@ int main (int argc, char* argv[])
 				Node node = graph.buildNode(sq);
 				//Checking whether the node exists.
 				if(!(graph.contains(node)))
-		        	{
+			       	{
 					__sync_fetch_and_add (&acceptance, 1);
 				}
 				else
 				{
 					auto index = graph.nodeMPHFIndex(node);
-					if(counter[index] <= t)
-			                {
+					if(counter[index] < t)
+				        {
 						//LocalSynchronizer sync (synchro);
 						__sync_fetch_and_add (&acceptance, 1);
 						__sync_fetch_and_add (&counter[index], 1);
-		            		}
+			       		}
 				}
 			}
-			Sequence fseq ((char*) sequence);
+		}
+		if(acceptance > 0)
+		{
 			synchro->lock();
-			if(acceptance > 0)
-		        {
-				outBank->insert(fseq);
-				//__sync_fetch_and_add (&count, 1);
-				count++; 
-		        }
-			synchro->unlock();
+			outBank->insert(seq);
+			count++; 
+			synchro->unlock();		
 		}
 			
 	});
