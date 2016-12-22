@@ -33,7 +33,7 @@ int main (int argc, char* argv[])
         IBank* outBank = new BankFasta (out_file);
 
         //Creating a graph and an iterator. from the parameters. The threshold value is kept as the minimum abundance parameter of the graph. kmer size is the actual kmer+1
-        Graph graph = Graph::create (Bank::open(argv[1]), "-kmer-size %s -abundance-min 2", argv[4]);
+        Graph graph = Graph::create (Bank::open(argv[1]), "-kmer-size %s -abundance-min 3", argv[4]);
         Graph::Iterator<Node> it = graph.iterator();
 
         int node_size= it.size();
@@ -49,13 +49,11 @@ int main (int argc, char* argv[])
 	
 	//Iterating over sequences 
         dispatcher.iterate (itSeq, [&] (Sequence& seq)
-	//for (itSeq.first(); !itSeq.isDone(); itSeq.next())
 	{
 		auto acceptance=0;
 		int stretch=0;
 		int position = 0;
 		int numerror=0;
-		//itKmer.setData (itSeq->getData());
 		int length = seq.getDataSize();
 		int startkmer = 0;
 		int endkmer = 0;		
@@ -104,6 +102,8 @@ int main (int argc, char* argv[])
 				flag=0;
 			}
 		}
+
+		//checking the thresholding
 		if(flag==1){
 			//Iterating over kmers in each sequence
 			for (itKmer.first(); !itKmer.isDone(); itKmer.next())
@@ -121,7 +121,6 @@ int main (int argc, char* argv[])
 					auto index = graph.nodeMPHFIndex(node);
 					if(counter[index] < t)
 				        {
-						//LocalSynchronizer sync (synchro);
 						__sync_fetch_and_add (&acceptance, 1);
 						__sync_fetch_and_add (&counter[index], 1);
 			       		}
@@ -138,7 +137,8 @@ int main (int argc, char* argv[])
 			
 	});
 	std::cout << count << std::endl;
-        //Free the memory
+        
+	//Free the memory
         delete [] counter;
         delete [] flg;
         bank->flush();
