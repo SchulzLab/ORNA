@@ -58,17 +58,47 @@ int main (int argc, char* argv[])
 		int startkmer = 0;
 		int endkmer = 0;		
 		int flag=1;	
+		int ch[5] = {0,0,0,0,0};
 		
 		Kmer<>::ModelCanonical model (kmer);
         	Kmer<>::ModelCanonical::Iterator itKmer (model);
 		itKmer.setData (seq.getData());
-
+		char* data = seq.getDataBuffer();
+		//Garbage Removal
+		/*for (size_t i=0; i<seq.getDataSize (); i++)
+		{
+			if (data[i]=='N' ) { 
+				ch[0]+=1; 
+			}
+			else if (data[i]=='A' ) { 
+				ch[1]+=1; 
+			}
+			else if (data[i]=='C' ) { 
+				ch[2]+=1; 
+			}
+			else if (data[i]=='T' ) { 
+				ch[3]+=1; 
+			}
+			else{ 
+				ch[4]+=1; 
+			}
+		}
+		for(int i=1;i<=4;i++)
+		{
+			if(ch[i]>=0.70*length)
+			{
+				flag=0;
+			}
+		}		
+		if(ch[0]>=10)
+		{
+			flag=0;
+		}*/
 		//Error Correction	
 		for(itKmer.first(); !itKmer.isDone(); itKmer.next())
 		{
 			std::string ts = model.toString (itKmer->value());
 			const char* tsq = ts.c_str();
-			
 			Node tnode = graph.buildNode(tsq);
 			if(!(graph.contains(tnode)) && (startkmer==1))
 			{
