@@ -8,8 +8,123 @@
 #include <gatb/gatb_core.hpp>
 #include <iostream>
 #include <string.h>
+#include <math.h>
 
 typedef Kmer<>::Type bloom;
+//Error Correction
+int errorcorrection(Graph graph, Kmer<>::ModelCanonical::Iterator itKmer, Kmer<>::ModelCanonical model, int length, int kmer){
+
+	int stretch=0;
+	int startkmer = 0;
+	int endkmer = 0;	
+	int flag=1;
+	int position = 0;
+	int numerror=0;
+	for(itKmer.first(); !itKmer.isDone(); itKmer.next())
+	{
+		std::string ts = model.toString (itKmer->value());
+		const char* tsq = ts.c_str();
+		Node tnode = graph.buildNode(tsq);
+		if(!(graph.contains(tnode)) && (startkmer==1))
+		{
+			stretch+=1;
+			position+=1;			
+		}
+		else
+		{
+			if(position==0)
+			{
+				startkmer=1;
+			}
+			if(position == (length-kmer))
+			{
+				endkmer=1;
+			}
+			if(stretch==kmer)
+			{	
+				if((startkmer==1)){
+					numerror=1;
+				}
+			}
+			stretch=0;
+			position+=1;
+		}
+	}
+	if(numerror==1)
+	{
+		if(endkmer==1)
+		{
+			flag=0;
+		}
+	}
+	return flag;
+}
+
+int readacceptance(Graph graph, Kmer<>::ModelCanonical::Iterator itKmer, Kmer<>::ModelCanonical model, int *counter, int t){
+	int acceptance=0;
+	for (itKmer.first(); !itKmer.isDone(); itKmer.next())
+	{
+		std::string s = model.toString (itKmer->value());
+		const char* sq = s.c_str();
+		Node node = graph.buildNode(sq);
+		//Checking whether the node exists.
+		if(!(graph.contains(node)))
+	       	{
+			__sync_fetch_and_add (&acceptance, 1);
+		}
+		else
+		{
+			auto index = graph.nodeMPHFIndex(node);
+			auto abund = graph.queryAbundance(node);
+			if(abund > t){
+				t = ceil(log10(abund));
+			} 
+			if(counter[index] < t)
+		        {
+				__sync_fetch_and_add (&acceptance, 1);
+				//__sync_fetch_and_add (&counter[index], 1);
+	       		}
+		}
+	}
+	return acceptance;
+}
+/*
+int garbageremoval(char *data, int size)
+{
+	int flag=0;
+	int ch[5] = {0,0,0,0,0};
+	for (size_t i=0; i<seq.getDataSize (); i++)
+	{
+		if (data[i]=='N' ) { 
+			ch[0]+=1; 
+		}
+		else if (data[i]=='A' ) { 
+			ch[1]+=1; 
+		}
+		else if (data[i]=='C' ) { 
+			ch[2]+=1; 
+		}
+		else if (data[i]=='T' ) { 
+			ch[3]+=1; 
+		}
+		else{ 
+			ch[4]+=1; 
+		}
+	}
+	for(int i=1;i<=4;i++)
+	{
+		if(ch[i]>=0.70*length)
+		{
+			flag=0;
+		}
+	}		
+	if(ch[0]>=10)
+	{
+		flag=0;
+	}
+	return flag;
+}*/
+
 
 int main (int argc, char* argv[])
 {
@@ -50,115 +165,39 @@ int main (int argc, char* argv[])
 	//Iterating over sequences 
         dispatcher.iterate (itSeq, [&] (Sequence& seq)
 	{
-		auto acceptance=0;
-		int stretch=0;
-		int position = 0;
-		int numerror=0;
 		int length = seq.getDataSize();
-		int startkmer = 0;
-		int endkmer = 0;		
 		int flag=1;	
-		int ch[5] = {0,0,0,0,0};
+		int gb = 1;
+		int acceptance=0; 
 		
 		Kmer<>::ModelCanonical model (kmer);
         	Kmer<>::ModelCanonical::Iterator itKmer (model);
 		itKmer.setData (seq.getData());
 		char* data = seq.getDataBuffer();
 		//Garbage Removal
-		/*for (size_t i=0; i<seq.getDataSize (); i++)
-		{
-			if (data[i]=='N' ) { 
-				ch[0]+=1; 
-			}
-			else if (data[i]=='A' ) { 
-				ch[1]+=1; 
-			}
-			else if (data[i]=='C' ) { 
-				ch[2]+=1; 
-			}
-			else if (data[i]=='T' ) { 
-				ch[3]+=1; 
-			}
-			else{ 
-				ch[4]+=1; 
-			}
+		//gb = garbageremoval(graph, )
+		//Error Correction
+		if(gb==1){	
+			flag=errorcorrection(graph, itKmer, model, length, kmer);
 		}
-		for(int i=1;i<=4;i++)
-		{
-			if(ch[i]>=0.70*length)
-			{
-				flag=0;
-			}
-		}		
-		if(ch[0]>=10)
-		{
-			flag=0;
-		}*/
-		//Error Correction	
-		for(itKmer.first(); !itKmer.isDone(); itKmer.next())
-		{
-			std::string ts = model.toString (itKmer->value());
-			const char* tsq = ts.c_str();
-			Node tnode = graph.buildNode(tsq);
-			if(!(graph.contains(tnode)) && (startkmer==1))
-			{
-				stretch+=1;
-				position+=1;			
-			}
-			else
-			{
-				if(position==0)
-				{
-					startkmer=1;
-				}
-				if(position == (length-kmer))
-				{
-					endkmer=1;
-				}
-				if(stretch==kmer)
-				{	
-					if((startkmer==1)){
-						numerror=1;
-					}
-				}
-				stretch=0;
-				position+=1;
-			}
-		}
-		if(numerror==1)
-		{
-			if(endkmer==1)
-			{
-				flag=0;
-			}
-		}
-
 		//checking the thresholding
 		if(flag==1){
-			//Iterating over kmers in each sequence
+			acceptance=readacceptance(graph, itKmer, model, counter, t);
+		}
+		if(acceptance > 0)
+		{
 			for (itKmer.first(); !itKmer.isDone(); itKmer.next())
 			{
 				std::string s = model.toString (itKmer->value());
 				const char* sq = s.c_str();
 				Node node = graph.buildNode(sq);
 				//Checking whether the node exists.
-				if(!(graph.contains(node)))
-			       	{
-					__sync_fetch_and_add (&acceptance, 1);
-				}
-				else
-				{
+				if(graph.contains(node))
+	       			{
 					auto index = graph.nodeMPHFIndex(node);
-					if(counter[index] < t)
-				        {
-						__sync_fetch_and_add (&acceptance, 1);
-						__sync_fetch_and_add (&counter[index], 1);
-			       		}
+					__sync_fetch_and_add (&counter[index], 1);	
 				}
-			}
-		}
-		if(acceptance > 0)
-		{
+			}	
 			synchro->lock();
 			outBank->insert(seq);
 			count++; 
@@ -180,3 +219,5 @@ int main (int argc, char* argv[])
     }
     return EXIT_SUCCESS;
 }
+
+
