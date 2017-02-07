@@ -1,1 +1,0 @@
-/usr/bin/c++    -msse2 -msse4.2 -mpopcnt    CMakeFiles/iterators3.dir/tools/iterators3.cpp.o  -o ../bin/iterators3 -rdynamic ../lib/libgatbcore.a -ldl -lpthread -lz ../lib/libhdf5.a -lm -lz -ldl 

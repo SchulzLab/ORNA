@@ -1,1 +1,0 @@
-/usr/bin/c++    -msse2 -msse4.2 -mpopcnt    CMakeFiles/bank16.dir/bank/bank16.cpp.o  -o ../bin/bank16 -rdynamic ../lib/libgatbcore.a -ldl -lpthread -lz ../lib/libhdf5.a -lm -lz -ldl 

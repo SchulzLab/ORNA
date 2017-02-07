@@ -1,1 +1,0 @@
-/usr/bin/c++    -msse2 -msse4.2 -mpopcnt    CMakeFiles/kmer4.dir/kmer/kmer4.cpp.o  -o ../bin/kmer4 -rdynamic ../lib/libgatbcore.a -ldl -lpthread -lz ../lib/libhdf5.a -lm -lz -ldl 

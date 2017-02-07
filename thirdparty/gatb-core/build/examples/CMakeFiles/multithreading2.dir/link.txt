@@ -1,1 +1,0 @@
-/usr/bin/c++    -msse2 -msse4.2 -mpopcnt    CMakeFiles/multithreading2.dir/tools/multithreading2.cpp.o  -o ../bin/multithreading2 -rdynamic ../lib/libgatbcore.a -ldl -lpthread -lz ../lib/libhdf5.a -lm -lz -ldl 

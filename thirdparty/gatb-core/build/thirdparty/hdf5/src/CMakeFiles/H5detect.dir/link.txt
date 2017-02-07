@@ -1,1 +1,0 @@
-/usr/bin/cc    -msse2 -msse4.2 -mpopcnt -std=c99 -fomit-frame-pointer -finline-functions -fno-common -fmessage-length=0    CMakeFiles/H5detect.dir/H5detect.c.o  -o ../../../bin/H5detect -rdynamic 

@@ -1,3 +1,0 @@
-/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/thirdparty/hdf5/build/src/CMakeFiles/H5detect.dir
-/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/thirdparty/hdf5/build/src/CMakeFiles/H5make_libsettings.dir
-/MMCI/MS/DeNovoAssembly2/work/ReREAD/Sample_ORNA/ORNA/thirdparty/gatb-core/thirdparty/hdf5/build/src/CMakeFiles/hdf5.dir

@@ -1,1 +1,0 @@
-/usr/bin/c++       CMakeFiles/ORNA.dir/ORNA/src/ORNA.cpp.o CMakeFiles/ORNA.dir/ORNA/src/main.cpp.o  -o ORNA -rdynamic ../ext/gatb-core/lib/libgatbcore.a -ldl -lpthread -lz ../ext/gatb-core/lib/libhdf5.a -lm -lz -ldl 
