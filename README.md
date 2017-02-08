@@ -64,13 +64,13 @@ The downloaded folder should contain the following files and folders:
 * The above command should create a folder ORNA in the present working directory
 
 ##Running ORNA
-* To run ORNA, execute the following command
+* To run ORNA, execute the following command from the installation directory
 ```
-  ./ORNA/build/tools/ORNA Dataset_name Output LogBase kmerSize NumberOfThreads
+  ./build/bin/ORNA Dataset_name Output LogBase kmerSize NumberOfThreads
 ```
 For instance, if the dataset to be normalized is named as input.fa, the following command would normalize the dataset using a log base of 10 and a kmer size of 21
 ```
-  ./ORNA/build/tolls/ORNA input.fa output.fa 10 21 1
+  ./build/bin/ORNA input.fa output.fa 10 21 1
 ```
 
 
