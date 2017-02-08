@@ -24,7 +24,7 @@ set (gatb-tool-version ${gatb-tool_VERSION_MAJOR}.${gatb-tool_VERSION_MINOR}.${g
 ################################################################################
 # Define cmake modules directory
 ################################################################################
-SET (GATB_CORE_HOME  ${PROJECT_SOURCE_DIR}/thirdparty/gatb-core)
+SET (GATB_CORE_HOME  ${PROJECT_SOURCE_DIR}/thirdparty/gatb-core/gatb-core/)
 SET (CMAKE_MODULE_PATH ${GATB_CORE_HOME}/cmake)
 
 ################################################################################
@@ -50,7 +50,25 @@ include (GatbCore)
 # TOOLS
 ################################################################################
 
-ADD_SUBDIRECTORY(tools)
+#ADD_SUBDIRECTORY(tools)
+
+add_definitions (${gatb-core-flags})
+
+# we define the files to be compiled
+
+set (PROGRAM_SOURCE_DIR ${PROJECT_SOURCE_DIR}/src)
+
+include_directories (${PROGRAM_SOURCE_DIR} ${gatb-core-includes})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+# we define the artifact to be built: the project binary
+add_executable        (${PROJECT_NAME}  src/main.cpp ${ProjectFiles})
+
+
+# we define which libraries to be linked with project binary
+target_link_libraries (${PROJECT_NAME}  ${gatb-core-libraries})
+
 
 ################################################################################
 # Packaging
@@ -74,6 +92,9 @@ SET (CPACK_SOURCE_IGNORE_FILES
     "^${GATB_CORE_HOME}/.gitignore"
     "^${GATB_CORE_HOME}/doc"
     "^${GATB_CORE_HOME}/DELIVERY.md"
+    "^${PROJECT_SOURCE_DIR}/\\.gitmodules"  ;
+    "^${PROJECT_SOURCE_DIR}/\\.gitignore";
+    "^${PROJECT_SOURCE_DIR}/\\.git/"
 )
 
 # Packaging the binary ; we want to include some additional files
