@@ -45,14 +45,14 @@ The downloaded folder should contain the following files and folders:
 * gatb-core (it will be empty. Files would be copied in once the install script is run)
 * src(folder) (contains the source code for ORNA)
 
-#Installation 
+##Installation 
 * Run the following command for installation 
 ```
   bash install.sh
 ```
 * The above command should create a folder ORNA in the present working directory
 
-#Running ORNA
+##Running ORNA
 * To run ORNA, execute the following command
 ```
   ./ORNA/build/tools/ORNA Dataset_name Output LogBase kmerSize NumberOfThreads
