@@ -1,5 +1,5 @@
 ## About
-With the advances in deep sequencing technologies, assembling high coverage datasets has become a challenge in terms of memory and runtime requirements. Hence, read normalization, a lossy read filtering approach is gaining a lot of attendtion. Although current normalization algorithms are efficient, they provide no guarantee to preserve important k-mers that form connections between different genomic regions in the graph. There is a possibility that the resultant assembly is fragmented. In this work, normalization is phrased as a set multicover problem on reads and a linear time approximation algorithm is proposed, named ORNA. ORNA normalizes to the minimum number of reads required to retain all k-mers and relative kmer abundances from the original dataset. Hence, no connections from the original graph are lost and coverage information is preserved. 
+With the advances in deep sequencing technologies, assembling high coverage datasets has become a challenge in terms of memory and runtime requirements. Hence, read normalization, a lossy read filtering approach is gaining a lot of attention. Although current normalization algorithms are efficient, they provide no guarantee to preserve important k-mers that form connections between different genomic regions in the graph. There is a possibility that the resultant assembly is fragmented. In this work, normalization is phrased as a set multicover problem on reads and a linear time approximation algorithm is proposed, named ORNA (Optimized Read Normalization Algorithm). ORNA normalizes to the minimum number of reads required to retain all k-mers and relative kmer abundances from the original dataset. Hence, no connections from the original graph are lost and coverage information is preserved. 
 
 ##Algorithm
 ```
@@ -40,7 +40,6 @@ The software can be downloaded by using the following command
 	git clone https://github.com/SchulzLab/ORNA
 ```
 
-## Running ORNA
 The downloaded folder should contain the following files and folders:
 * install.sh
 * gatb-core (it will be empty. Files would be copied in once the install script is run)
