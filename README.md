@@ -61,7 +61,7 @@ The downloaded folder should contain the following files and folders:
 ```
   bash install.sh
 ```
-* The above command should create a folder ORNA in the present working directory
+* The above command should create a build folder. The executable of ORNA will be in build/bin 
 
 ##Running ORNA
 * To run ORNA, execute the following command from the installation directory
