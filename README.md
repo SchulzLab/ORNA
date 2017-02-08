@@ -22,5 +22,47 @@ With the advances in deep sequencing technologies, assembling high coverage data
 17.                Rout = Rout U r
 18.              end if
 19.          end for
-20.    Output: Rout
+20. Output: Rout
 ```
+
+##Version
+Version 0.1
+
+##Contact
+For questions or suggestions regarding ORNA contact
+
+* Dilip A Durai (ddurai_at_contact.mmci.uni-saarland.de)
+* Marcel H Schulz (mschulz_at_mmci.uni-saarland.de)
+
+##Download
+The software can be downloaded by using the following command
+```
+	git clone https://github.com/SchulzLab/ORNA
+```
+
+## Running ORNA
+The downloaded folder should contain the following files and folders:
+* install.sh
+* gatb-core (it will be empty. Files would be copied in once the install script is run)
+* src(folder) (contains the source code for ORNA)
+
+#Installation 
+* Run the following command for installation 
+```
+  bash install.sh
+```
+* The above command should create a folder ORNA in the present working directory
+
+#Running ORNA
+* To run ORNA, execute the following command
+```
+  ./ORNA/build/tools/ORNA Dataset_name Output LogBase kmerSize NumberOfThreads
+```
+For instance, if the dataset to be normalized is named as input.fa, the following command would normalize the dataset using a log base of 10 and a kmer size of 21
+```
+  ./ORNA/build/tolls/ORNA input.fa output.fa 10 21 1
+```
+
+
+
+  
