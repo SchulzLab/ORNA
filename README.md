@@ -1,6 +1,9 @@
 ## About
 With the advances in deep sequencing technologies, assembling high coverage datasets has become a challenge in terms of memory and runtime requirements. Hence, read normalization, a lossy read filtering approach is gaining a lot of attention. Although current normalization algorithms are efficient, they provide no guarantee to preserve important k-mers that form connections between different genomic regions in the graph. There is a possibility that the resultant assembly is fragmented. In this work, normalization is phrased as a set multicover problem on reads and a linear time approximation algorithm is proposed, named ORNA (Optimized Read Normalization Algorithm). ORNA normalizes to the minimum number of reads required to retain all k-mers and relative kmer abundances from the original dataset. Hence, no connections from the original graph are lost and coverage information is preserved. 
 
+##When to use ORNA
+ORNA is a read normalization software developed in spirit of Diginorm. ORNA is computaional inexpensive and it guarentees the preservation of all the kmers from the original dataset. It can be used if the user has a high covergae dataset but does not have enough compuational memory or if the user has limited runtime. The user must be aware that using ORNA (or in that case any normalization software) might have a significant impact on the assemblies produced as it is highly dependant on the dataset.    
+
 ##Algorithm
 ```
 1.  Input : Read set R, LogBase b, kmer size k
@@ -24,6 +27,14 @@ With the advances in deep sequencing technologies, assembling high coverage data
 19.          end for
 20. Output: Rout
 ```
+
+*	ORNA uses the GATB version 1.2.2 to build a cascading bloom filter to store the kmer information
+*	It reduces the abundance of a kmer to a value which is equal to the logarithmic transformation of the abundance. The base b of the logarithm is provided by the user.
+*	ORNA was tested on two de bruijn graph based assemblers namely Oases and TransABySS		
+
+## Points to be noted
+*	Currently, as ORNA retains all the kmers from the original dataset, it would also retain erroneous kmers. ORNA assumes that the input dataset is error corrected prior to normalization
+*	ORNA doesnt support paired end reads. It assumes the paired end reads as single end reads and hence the paired end information is not retained in the normalized dataset. Future versions of ORNA will support paired end information. 
 
 ##Version
 Version 0.1
