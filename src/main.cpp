@@ -109,7 +109,7 @@ public:
 				for (itKmer.first(); !itKmer.isDone(); itKmer.next())
 				{
 					std::string s = model.toString (itKmer->value());
-					const char* sq = s.c_str();
+					const char* sq = s.c_str();git commit -a 
 					Node node = graph.buildNode(sq);
 					//Checking whether the node exists.
 					if(graph.contains(node))
