@@ -73,6 +73,7 @@ For instance, if the dataset to be normalized is named as input.fa, the followin
   ./build/bin/ORNA input.fa output.fa 10 21 1
 ```
 
+Note that ORNA only accepts input file in fasta format
 
 ##Citation
 If you use ORNA in your work please cite:
