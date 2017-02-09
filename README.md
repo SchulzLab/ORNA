@@ -80,11 +80,11 @@ short | explanation | note
 ##Running ORNA
 * To run ORNA, execute the following command from the installation directory
 ```
-  ./build/bin/ORNA Dataset_name Output LogBase kmerSize NumberOfThreads
+  ./build/bin/ORNA -input Dataset_name -output Output -base LogBase -kmer kmerSize -nb-cores NumberOfThreads
 ```
 For instance, if the dataset to be normalized is named as input.fa, the following command would normalize the dataset using a log base of 10 and a kmer size of 21
 ```
-  ./build/bin/ORNA input.fa output.fa 10 21 1
+  ./build/bin/ORNA -input input.fa -output output.fa -base 10 -kmer 21 -nb-cores 1
 ```
 
 Note that ORNA only accepts input file in fasta format
