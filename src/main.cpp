@@ -3,8 +3,6 @@
 	Developed by : Dilip A Durai and Marcel H Schulz
 */
 
-//File last modified 28/11/2016
-
 #include <gatb/gatb_core.hpp>
 #include <iostream>
 #include <string.h>
@@ -12,16 +10,10 @@
 #include <algorithm>
 
 typedef Kmer<>::Type bloom;
-
-void helpmessage(){
-	//std::cout << "One or more parameter missing" << std::endl;
-	std::cout << "Usage : ./ORNA input.fa output.fa log_base kmer_size no_of_threads" << std::endl;
-}
-
-void errormessage(){
-	std::cout << "Error: One or more parameter missing" << std::endl;
-	std::cout << "Usage : ./ORNA input.fa output.fa log_base kmer_size no_of_threads" << std::endl;
-}
+static const char* STR_BASE = "-base";
+static const char* STR_INPUT = "-input";
+static const char* STR_OUTPUT = "-output";
+static const char* STR_KMER = "-kmer";
 
 int readacceptance(Graph graph, Kmer<>::ModelCanonical::Iterator itKmer, Kmer<>::ModelCanonical model, unsigned int *counter, double base){
 	int acceptance=0;
@@ -52,33 +44,30 @@ int readacceptance(Graph graph, Kmer<>::ModelCanonical::Iterator itKmer, Kmer<>:
 	return acceptance;
 }
 
-int main (int argc, char* argv[])
-{
-    try
-    {
-	if(strcmp(argv[1],"--help") == 0 or strcmp(argv[1],"-h") == 0)
-	{
-		helpmessage();
-	}
-	else if(strcmp(argv[1],"--version")==0 or strcmp(argv[1],"-v") == 0)
-	{
-		std::cout << "v.0.1" << std::endl;
-	}
-	else if (argc <6)
-	{
-		errormessage();
-	}
-	else{
-        //Variables required by ORNA
-		int count=0;
-		double base=atof(argv[3]);
-		int user_kmer = atoi(argv[4]);
-		int kmer = user_kmer + 1; 
-		const char* filename = argv[1];
-		const char* out_file= argv[2];
 
-		auto nbCores = atoi(argv[5]);
-		Dispatcher dispatcher (nbCores);
+class ORNA : public Tool
+{
+public:
+	ORNA(): Tool("ORNA")
+	{
+		getParser()->push_front (new OptionOneParam (STR_KMER, "kmer required",  false, "21"));
+	        getParser()->push_front (new OptionOneParam (STR_INPUT, "Input File",  true));
+	        getParser()->push_front (new OptionOneParam (STR_OUTPUT, "Output File",  true));
+		getParser()->push_front (new OptionOneParam (STR_BASE, "Base for the logarithmic function",  true));
+	
+	}
+	void execute()
+	{
+		int count=0;
+		double base=getInput()->getDouble(STR_BASE);
+		int user_kmer = getInput()->getInt(STR_KMER);
+		int kmer = user_kmer + 1; 
+		const char* filename = (getInput()->get(STR_INPUT))->getString();
+		const char* out_file= (getInput()->get(STR_OUTPUT))->getString();
+		
+		int nbCores = getInput()->getInt(STR_NB_CORES);
+
+		Dispatcher dispatcher(nbCores) ;
 		ISynchronizer* synchro = System::thread().newSynchronizer();	//Locking a section
 
 		//Variables required for GATB
@@ -87,7 +76,7 @@ int main (int argc, char* argv[])
 		IBank* outBank = new BankFasta (out_file);
 	
 		//Creating a graph and an iterator. from the parameters. The threshold value is kept as the minimum abundance parameter of the graph. kmer size is the actual kmer+1
-		Graph graph = Graph::create (Bank::open(argv[1]), "-kmer-size %d -abundance-min 1", kmer);
+		Graph graph = Graph::create (Bank::open(filename), "-kmer-size %d -abundance-min 1", kmer);
 		GraphIterator<Node> it = graph.iterator();
 
 		long node_size= it.size();
@@ -143,12 +132,19 @@ int main (int argc, char* argv[])
 		bank->flush();
 		outBank->flush();
 	}
-    }
-    catch (Exception& e)
-    {
-        std::cerr << "EXCEPTION: " << e.getMessage() << std::endl;
-    }
-    return EXIT_SUCCESS;
+};
+
+int main (int argc, char* argv[])
+{
+	try{
+		ORNA().run(argc,argv);
+		return EXIT_SUCCESS;	
+	}
+	catch(Exception& e){
+		std::cout << "EXCEPTION: " << e.getMessage() << std::endl;
+        	return EXIT_FAILURE;
+	}
+     	
 }
 
 
