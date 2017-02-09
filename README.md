@@ -63,6 +63,20 @@ The downloaded folder should contain the following files and folders:
 ```
 * The above command should create a build folder. The executable of ORNA will be in build/bin 
 
+##ORNA paramters
+
+`./bin/ORNA -help`
+
+short | explanation | note
+-----------|------------|--------
+-help | shows the help message |
+-base | Base value for the logarithmic function| Required parameter
+-kmer | the value of k for kmer size | Default 21
+-input | Input fasta file | Required parameter
+-output | Output fasta file| Required parameter 
+-nb-cores | number of cores | default=0 (all cores)
+
+
 ##Running ORNA
 * To run ORNA, execute the following command from the installation directory
 ```
