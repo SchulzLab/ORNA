@@ -56,6 +56,9 @@ The downloaded folder should contain the following files and folders:
 * gatb-core (it will be empty. Files would be copied in once the install script is run)
 * src(folder) (contains the source code for ORNA)
 
+##Pre-requisite
+gcc version >=4.7
+
 ##Installation 
 * Run the following command for installation 
 ```
