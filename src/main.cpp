@@ -125,9 +125,14 @@ public:
 			}
 
 		});
-		std::cout << count << std::endl;
+		std::cout << "Kept " << count << " reads" <<  std::endl;
 
 		//Free the memory
+		std::string filename1 = string(filename).substr(string(filename).find_last_of("/\\") + 1);
+		size_t lindex = filename1.find_last_of(".");
+		filename1 = (filename1.substr(0,lindex)) + string(".h5");
+		remove(filename1.c_str());
+	
 		delete [] counter;
 		bank->flush();
 		outBank->flush();
