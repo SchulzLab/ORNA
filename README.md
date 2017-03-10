@@ -66,7 +66,7 @@ gcc version >=4.7
 ```
 * The above command should create a build folder. The executable of ORNA will be in build/bin 
 
-##ORNA paramters
+##ORNA parameters
 
 `./bin/ORNA -help`
 
@@ -79,10 +79,10 @@ short | explanation | note
 -output | Output fasta file| Required parameter 
 -nb-cores | number of cores | default=0 (all cores)
 
-#kmer 
+kmer 
 This parameter represents the kmer size to be used for reduction. All the analysis in the paper were done using a kmer size of 21 for reads having length of 50bps and 76bps. In general, a lower kmer size will have a higher percent of reads reduced but will require more memory and runtime.
 
-#base
+base
 This parameter represents the base of the logarithm function used to decide the new abundance of kmer. For instance if the original abundance of a kmer is 1000 and a base of 10 is selected as a parameter then the new abundance is set to log<sub>10</sub>1000 = 3. According to the analysis done in ORNA paper, a base of 3 to 7 reduces nearly 70% of data with little effect on the quality of the assembly produced. 
 
 ##Running ORNA
