@@ -36,16 +36,16 @@ ORNA is a read normalization software developed in spirit of [Diginorm](https://
 *	Currently, as ORNA retains all the kmers from the original dataset, it would also retain erroneous kmers. ORNA assumes that the input dataset is error corrected prior to normalization. In case of RNA-seq or other non-uniform data we suggest to use the [SEECER](http://sb.cs.cmu.edu/seecer/) algorithm that proved to work well with ORNA.
 *	ORNA does not currently support paired end reads. It treats paired end reads as single end reads and hence the paired end information is not retained in the normalized dataset. Future versions of ORNA will support paired end information. 
 
-##Version
+## Version
 Version 0.1
 
-##Contact
+## Contact
 For questions or suggestions regarding ORNA contact
 
 * Dilip A Durai (ddurai_at_contact.mmci.uni-saarland.de)
 * Marcel H Schulz (mschulz_at_mmci.uni-saarland.de)
 
-##Download
+## Download
 The software can be downloaded by using the following command
 ```
 	git clone https://github.com/SchulzLab/ORNA
@@ -56,17 +56,17 @@ The downloaded folder should contain the following files and folders:
 * gatb-core (it will be empty. Files would be copied in once the install script is run)
 * src(folder) (contains the source code for ORNA)
 
-##Pre-requisite
+## Pre-requisite
 gcc version >=4.7
 
-##Installation 
+## Installation 
 * Run the following command for installation 
 ```
   bash install.sh
 ```
 * The above command should create a build folder. The executable of ORNA will be in build/bin 
 
-##ORNA parameters
+## ORNA parameters
 
 `./bin/ORNA -help`
 
