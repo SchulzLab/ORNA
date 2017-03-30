@@ -57,7 +57,8 @@ The downloaded folder should contain the following files and folders:
 * src(folder) (contains the source code for ORNA)
 
 ## Pre-requisite
-gcc version >=4.7
+Linux operating system with gcc version >=4.7<br/>
+All the analysis for the manuscript was performed on Debain 8 operating system
 
 ## Installation 
 * Run the following command for installation 
