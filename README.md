@@ -1,5 +1,5 @@
 ## About
-With the advances in deep sequencing technologies, assembling high coverage datasets has become a challenge in terms of memory and runtime requirements. Hence, read normalization, a lossy read filtering approach is gaining a lot of attention. Although current normalization algorithms are efficient, they provide no guarantee to preserve important k-mers that form connections between different genomic regions in the graph. There is a possibility that the resultant assembly is fragmented. In this work, normalization is phrased as a set multicover problem on reads and a linear time approximation algorithm is proposed, named ORNA (Optimized Read Normalization Algorithm). ORNA normalizes to the minimum number of reads required to retain all k-mers and relative kmer abundances from the original dataset. Hence, no connections from the original graph are lost and coverage information is preserved. 
+With the advances in deep sequencing technologies, assembling high coverage datasets has become a challenge in terms of memory and runtime requirements. Hence, read normalization, a lossy read filtering approach is gaining a lot of attention. Although current normalization algorithms are efficient, they provide no guarantee to preserve important k-mers that form connections between different genomic regions in the graph. There is a possibility that the resultant assembly is fragmented. In this work, normalization is phrased as a set multicover problem on reads and a linear time heuristic algorithm is proposed, named ORNA (Optimized Read Normalization Algorithm). ORNA normalizes to the minimum number of reads required to retain all k-mers and relative kmer abundances from the original dataset. Hence, no connections from the original graph are lost and coverage information is preserved. 
 
 ## When to use ORNA
 ORNA is a read normalization software developed in spirit of [Diginorm](https://github.com/dib-lab/2012-paper-diginorm). ORNA is computationally inexpensive and it guarantees the preservation of all kmers from the original dataset. It can be used if the user has a high coverage dataset but does not have enough computational power (in particular memory but also limited time) in order to conduct a *de novo* assembly, because it removes the redundancy in your data. It can also be used to merge many sequencing datasets. The user must be aware that using ORNA (or in that case any normalization software) might have a significant impact on the assemblies produced as it is highly dependent on the dataset.
@@ -28,13 +28,13 @@ ORNA is a read normalization software developed in spirit of [Diginorm](https://
 20. Output: Rout
 ```
 
-*	ORNA uses the GATB version 1.2.2 to build a cascading bloom filter to store the kmer information
+*	ORNA uses the GATB version 1.2.2 to store the kmer information
 *	It reduces the abundance of a kmer to a value which is equal to the logarithmic transformation of the abundance. The base b of the logarithm is provided by the user.
-*	ORNA was tested on two de bruijn graph based assemblers namely Oases and TransABySS		
+*	ORNA was tested on two de bruijn graph based assemblers namely Oases and TransABySS and we currently run experiments with metagenomics data		
 
 ## Points to be noted
-*	Currently, as ORNA retains all the kmers from the original dataset, it would also retain erroneous kmers. ORNA assumes that the input dataset is error corrected prior to normalization. In case of RNA-seq or other non-uniform data we suggest to use the [SEECER](http://sb.cs.cmu.edu/seecer/) algorithm that proved to work well with ORNA.
-*	ORNA does not currently support paired end reads. It treats paired end reads as single end reads and hence the paired end information is not retained in the normalized dataset. Future versions of ORNA will support paired end information. 
+*	Currently, as ORNA retains all the kmers from the original dataset, it would also retain erroneous kmers. Thus ORNA reduces more reads, like any other tool for read reduction, when the data is error corrected. In case of RNA-seq or other non-uniform data we suggest to use the [SEECER](http://sb.cs.cmu.edu/seecer/) algorithm that proved to work well with ORNA.
+*	ORNA does not currently support paired end reads. It treats paired-end reads as single-end reads and hence the paired-end information is not retained in the normalized dataset. We are currently working on a paired-end extension, so stay tuned. 
 
 ## Version
 Version 0.1
@@ -81,7 +81,7 @@ short | explanation | note
 -nb-cores | number of cores | default=0 (all cores)
 
 kmer value: <br />
-This parameter represents the kmer size to be used for reduction. All the analysis in the paper were done using a kmer size of 21 for reads having length of 50bps and 76bps. In general, a lower kmer size will have a higher percent of reads reduced but will require more memory and runtime.
+This parameter represents the kmer size to be used for reduction. All the analysis in the paper were done using a kmer size of 21 for reads having length of 50bps and 76bps. If you are running an DBG assembly afterwards, we recommend to use the smallest k-mer used in the assembler. Depending on the dataset memory and runtime requirements will change depending on k.
 
 base: <br />
 This parameter represents the base of the logarithm function used to decide the new abundance of kmer. For instance if the original abundance of a kmer is 1000 and a base of 10 is selected as a parameter then the new abundance is set to log<sub>10</sub>1000 = 3. According to the analysis done in ORNA paper, a base of 1.7 seems to be a good compromise between data reduction and little loss in assembly quality.
@@ -102,3 +102,6 @@ Note that ORNA only accepts input file in fasta format
 If you use ORNA in your work please cite:
 
 Durai DA, Schulz MH. In-silico read normalization with set multicover optimization. in preparation
+
+## Acknowledgement
+ORNA uses the [https://github.com/GATB](GATB library) for k-mer counting and we are thankful for their support.
