@@ -101,7 +101,7 @@ Note that ORNA only accepts input file in fasta format
 ## Citation
 If you use ORNA in your work please cite:
 
-Durai DA, Schulz MH. In-silico read normalization with set multicover optimization. [http://www.biorxiv.org/content/early/2017/05/03/133579?%3Fcollection=](preprint)
+Durai DA, Schulz MH. In-silico read normalization with set multicover optimization. [preprint](http://www.biorxiv.org/content/early/2017/05/03/133579?%3Fcollection=)
 
 ## Acknowledgement
-ORNA uses the [https://github.com/GATB](GATB library) for k-mer counting and we are thankful for their support.
+ORNA uses the [GATB library](https://github.com/GATB) for k-mer counting and we are thankful for their support.
