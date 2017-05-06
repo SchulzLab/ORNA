@@ -42,7 +42,7 @@ Version 0.1
 ## Contact
 For questions or suggestions regarding ORNA contact
 
-* Dilip A Durai (ddurai_at_contact.mmci.uni-saarland.de)
+* Dilip A Durai (ddurai_at_mmci.uni-saarland.de)
 * Marcel H Schulz (mschulz_at_mmci.uni-saarland.de)
 
 ## Download
