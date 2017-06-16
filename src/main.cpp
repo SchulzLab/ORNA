@@ -364,7 +364,6 @@ public:
 		} 
 		if(std::strcmp(filename, "ORNAERROR") == 0)
 		{
-			std::cout << "Running ORNA in paired end mode" << std::endl;
 			if((std::strcmp(read1, "ORNAERROR") == 0) && (std::strcmp(read2, "ORNAERROR") == 0))
 			{
 				std::cout << "Input File(s) missing. Please refer to the help" << std::endl;
