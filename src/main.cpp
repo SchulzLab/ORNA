@@ -343,7 +343,7 @@ public:
 		getParser()->push_front (new OptionOneParam (STR_KMER, "kmer required",  false, "21"));
 	        getParser()->push_front (new OptionOneParam (STR_INPUT, "Input File",  false, "ORNAERROR"));
 	        getParser()->push_front (new OptionOneParam (STR_OUTPUT, "Output File",  false, "Normalized.fa"));
-		getParser()->push_front (new OptionOneParam (STR_BASE, "Base for the logarithmic function",  false, "3"));
+		getParser()->push_front (new OptionOneParam (STR_BASE, "Base for the logarithmic function",  false, "1.7"));
 		getParser()->push_front (new OptionOneParam (STR_PAIR1, "First read of the pair", false, "ORNAERROR" ));
 		getParser()->push_front (new OptionOneParam (STR_PAIR2, "Second read of the pair", false, "ORNAERROR" ));
 	}
