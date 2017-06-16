@@ -75,7 +75,9 @@ short | explanation | note
 -help | shows the help message |
 -base | Base value for the logarithmic function| 3
 -kmer | the value of k for kmer size | Default 21
--input | Input fasta file | Required parameter
+-input | Input fasta file (for single end mode)| 
+-pair1 | First mate of the pair (for paired-end mode) |
+-pair2 | Second mate of the pair (for paired-end mode) |
 -output | Output fasta file| Default "Normalized.fa"
 -nb-cores | number of cores (does not work for paired end mode)| default=0 (all cores) 
 
