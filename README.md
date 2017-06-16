@@ -34,9 +34,9 @@ ORNA is a read normalization software developed in spirit of [Diginorm](https://
 
 ## Points to be noted
 *	Currently, as ORNA retains all the kmers from the original dataset, it would also retain erroneous kmers. Thus ORNA reduces more reads, like any other tool for read reduction, when the data is error corrected. In case of RNA-seq or other non-uniform data we suggest to use the [SEECER](http://sb.cs.cmu.edu/seecer/) algorithm that proved to work well with ORNA.
-
+*	ORNA's paired end mode currently does not support multithreading. Work is in progress for this and will be included in the future versions of ORNA
 ## Version
-Version 0.1
+Version 0.2
 
 ## Contact
 For questions or suggestions regarding ORNA contact
@@ -76,8 +76,8 @@ short | explanation | note
 -base | Base value for the logarithmic function| Required parameter
 -kmer | the value of k for kmer size | Default 21
 -input | Input fasta file | Required parameter
--output | Output fasta file| Required parameter 
--nb-cores | number of cores | default=0 (all cores)
+-output | Output fasta file| Default "Normalized.fa"
+-nb-cores | number of cores (does not work for paired end mode)| default=0 (all cores) 
 
 kmer value: <br />
 This parameter represents the kmer size to be used for reduction. All the analysis in the paper were done using a kmer size of 21 for reads having length of 50bps and 76bps. If you are running an DBG assembly afterwards, we recommend to use the smallest k-mer used in the assembler. Depending on the dataset memory and runtime requirements will change depending on k.
