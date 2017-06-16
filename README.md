@@ -73,7 +73,7 @@ All the analysis for the manuscript was performed on Debain 8 operating system
 short | explanation | note
 -----------|------------|--------
 -help | shows the help message |
--base | Base value for the logarithmic function| Required parameter
+-base | Base value for the logarithmic function| 3
 -kmer | the value of k for kmer size | Default 21
 -input | Input fasta file | Required parameter
 -output | Output fasta file| Default "Normalized.fa"
