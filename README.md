@@ -34,7 +34,6 @@ ORNA is a read normalization software developed in spirit of [Diginorm](https://
 
 ## Points to be noted
 *	Currently, as ORNA retains all the kmers from the original dataset, it would also retain erroneous kmers. Thus ORNA reduces more reads, like any other tool for read reduction, when the data is error corrected. In case of RNA-seq or other non-uniform data we suggest to use the [SEECER](http://sb.cs.cmu.edu/seecer/) algorithm that proved to work well with ORNA.
-*	ORNA does not currently support paired end reads. It treats paired-end reads as single-end reads and hence the paired-end information is not retained in the normalized dataset. We are currently working on a paired-end extension, so stay tuned. 
 
 ## Version
 Version 0.1
