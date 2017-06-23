@@ -79,7 +79,7 @@ short | explanation | note
 -pair1 | First mate of the pair (for paired-end mode) |
 -pair2 | Second mate of the pair (for paired-end mode) |
 -output | Output fasta file| Default "Normalized.fa"
--nb-cores | number of cores (does not work for paired end mode)| default=1 
+-nb-cores | number of cores (does not work for paired end mode)| Default 1 
 
 kmer value: <br />
 This parameter represents the kmer size to be used for reduction. All the analysis in the paper were done using a kmer size of 21 for reads having length of 50bps and 76bps. If you are running an DBG assembly afterwards, we recommend to use the smallest k-mer used in the assembler. Depending on the dataset memory and runtime requirements will change depending on k.
