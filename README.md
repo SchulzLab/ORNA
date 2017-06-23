@@ -73,7 +73,7 @@ All the analysis for the manuscript was performed on Debain 8 operating system
 short | explanation | note
 -----------|------------|--------
 -help | shows the help message |
--base | Base value for the logarithmic function| 1.7
+-base | Base value for the logarithmic function| Default 1.7
 -kmer | the value of k for kmer size | Default 21
 -input | Input fasta file (for single end mode)| 
 -pair1 | First mate of the pair (for paired-end mode) |
