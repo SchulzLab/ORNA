@@ -39,7 +39,7 @@ int readacceptance(Graph graph, Kmer<>::ModelCanonical::Iterator itKmer, Kmer<>:
 		}
 		if(counter[index] < threshold)
 		{
-			__sync_fetch_and_add (&acceptance, 1);
+			acceptance=acceptance+1;
 			break;			
 			//__sync_fetch_and_add (&counter[index], 1);
 	       	}
