@@ -92,11 +92,11 @@ This parameter represents the base of the logarithm function used to decide the 
 ```
   ./build/bin/ORNA -input Dataset_name -output Output -base LogBase -kmer kmerSize -nb-cores NumberOfThreads
 ```
-To un ORNA in paired paired end mode from the installation directory 
+* Run ORNA in paired-end mode from the installation directory 
 ```
   ./build/bin/ORNA -pair1 first_pair -pair2 second_pair -output Output -base LogBase -kmer kmerSize
 ```
-For instance, if the dataset to be normalized is named as input.fa, the following command would normalize the dataset using a log base of 1.7 and a kmer size of 21
+* For instance, if the dataset to be normalized is named as input.fa, the following command would normalize the dataset using a log base of 1.7 and a kmer size of 21
 ```
   ./build/bin/ORNA -input input.fa -output output.fa -base 1.7 -kmer 21 -nb-cores 1
 ```
