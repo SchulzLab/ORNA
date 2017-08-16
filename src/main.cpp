@@ -151,15 +151,13 @@ void pairedend(const char* read1, const char* read2, const char* out_file, doubl
 	int index;
 	unsigned short length;
 	int tmp=0;
-	        
-	// We iterate the two banks. Note how we provide two iterators from the two banks.
+		
         PairedIterator<Sequence> itPair (bank1->iterator(), bank2->iterator());
         for(itPair.first(); !itPair.isDone(); itPair.next())
         {
         	num_sequence++;
         }
-        //int inisize=2;
-	std::vector<int> tempBank;
+        std::vector<int> tempBank;
 	
 	Kmer<>::ModelCanonical model (kmer);
 	Kmer<>::ModelCanonical::Iterator itKmer (model);
@@ -178,7 +176,7 @@ void pairedend(const char* read1, const char* read2, const char* out_file, doubl
 	    itKmer.setData (s1.getData());
 	    itKmer1.setData (s2.getData());
 	    	    
-	    //checking the thresholding
+	    //checking the threshold
 	    acceptance1 = readacceptance(graph, itKmer, model, counter, base);
 	    acceptance2 = readacceptance(graph, itKmer1, model, counter, base);
 	    if(acceptance1 > 0 && acceptance2>0)
