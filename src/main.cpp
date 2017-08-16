@@ -51,8 +51,8 @@ int readacceptance(Graph graph, Kmer<>::ModelCanonical::Iterator itKmer, Kmer<>:
 void singleend(const char* filename, const char* out_file, double base, unsigned short kmer, int nbCores)
 {
 	int count=0;
-	//const char* error = getError(filename , pair1, pair2);		
-		
+	
+	//Multithreading functionality provided by GATB library
 	Dispatcher dispatcher(nbCores) ;
 	ISynchronizer* synchro = System::thread().newSynchronizer();	//Locking a section
 
@@ -74,7 +74,7 @@ void singleend(const char* filename, const char* out_file, double base, unsigned
 	    counter[i]=0;
 	}
 
-	//Iterating over sequences
+	//Iterating over sequences the GATB way
 	dispatcher.iterate (itSeq, [&] (Sequence& seq)
 	{
 		int length = seq.getDataSize();
