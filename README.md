@@ -109,4 +109,4 @@ If you use ORNA in your work please cite:
 Durai DA, Schulz MH. In-silico read normalization with set multicover optimization. [preprint](http://biorxiv.org/content/early/2017/05/04/133579)
 
 ## Acknowledgement
-ORNA uses the [GATB library](https://github.com/GATB) for k-mer counting and we are thankful for their support.
+ORNA uses the [GATB library](https://github.com/GATB) for graph building and k-mer counting. We are thankful for their support.
