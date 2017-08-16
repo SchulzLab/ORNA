@@ -54,12 +54,12 @@ void singleend(const char* filename, const char* out_file, double base, unsigned
 	
 	//Multithreading functionality provided by GATB library
 	Dispatcher dispatcher(nbCores) ;
-	ISynchronizer* synchro = System::thread().newSynchronizer();	//Locking a section
+	ISynchronizer* sync = System::thread().newSynchronizer();	//Locking a section
 
 	//Variables required for GATB
-	IBank* bank = Bank::open (filename);
-	ProgressIterator<Sequence> itSeq (*bank);
-	IBank* outBank = new BankFasta (out_file);
+	IBank* InputDataset = Bank::open (filename);
+	ProgressIterator<Sequence> itSeq (*InputDataset);
+	IBank* OutDataset = new BankFasta (out_file);
 	
 	//Creating a graph and an iterator. from the parameters. The threshold value is kept as the minimum abundance parameter of the graph. kmer size is the actual kmer+1
 	Graph graph = Graph::create (Bank::open(filename), "-kmer-size %d -abundance-min 1", kmer);
@@ -105,10 +105,10 @@ void singleend(const char* filename, const char* out_file, double base, unsigned
 					__sync_fetch_and_add (&counter[index], 1);
 				}
 			}
-			synchro->lock();
-			outBank->insert(seq);
+			sync->lock();
+			OutDataset->insert(seq);
 			count++;
-			synchro->unlock();
+			sync->unlock();
 		}
 
 	});
@@ -121,18 +121,18 @@ void singleend(const char* filename, const char* out_file, double base, unsigned
 	remove(filename1.c_str());
 	
 	delete [] counter;
-	bank->flush();
-	outBank->flush();	
+	InputDataset->flush();
+	OutDataset->flush();	
 }
 
 void pairedend(const char* read1, const char* read2, const char* out_file, double base, unsigned short kmer )
 {
-	IBank* bank1 = Bank::open (read1);  
-	LOCAL (bank1);
-        IBank* bank2 = Bank::open (read2);  
-	LOCAL (bank2);
+	IBank* InputDataset1 = Bank::open (read1);  
+	LOCAL (InputDataset1);
+        IBank* InputDataset2 = Bank::open (read2);  
+	LOCAL (InputDataset2);
 	
-	IBank* outBank = new BankFasta (out_file);
+	IBank* OutDataset = new BankFasta (out_file);
 
 	Graph graph = Graph::create ("-in %s,%s -kmer-size %d -abundance-min 1", read1, read2, kmer);
 	GraphIterator<Node> NodeIterator = graph.iterator();	
@@ -152,8 +152,9 @@ void pairedend(const char* read1, const char* read2, const char* out_file, doubl
 	int index;
 	unsigned short length;
 	int tmp=0;
-		
-        PairedIterator<Sequence> itPair (bank1->iterator(), bank2->iterator());
+	
+	//Iterating paired end sequences using GATB's paired end iterator	
+        PairedIterator<Sequence> itPair (InputDataset1->iterator(), InputDataset2->iterator());
         for(itPair.first(); !itPair.isDone(); itPair.next())
         {
         	num_sequence++;
@@ -234,8 +235,8 @@ void pairedend(const char* read1, const char* read2, const char* out_file, doubl
 				}
 			}
 	    	}
-	    	outBank->insert(s1);
-		outBank->insert(s2);
+	    	OutDataset->insert(s1);
+		OutDataset->insert(s2);
 		count++;
 	    }
 	    else if(acceptance1>0 || acceptance2>0){
@@ -318,8 +319,8 @@ void pairedend(const char* read1, const char* read2, const char* out_file, doubl
 					}
 				}
 		    	}
-			outBank->insert(s1);
-			outBank->insert(s2);
+			OutDataset->insert(s1);
+			OutDataset->insert(s2);
 			count++;
 		   }
 		   tmp_index++;
