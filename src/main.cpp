@@ -1,6 +1,7 @@
 /*
 	Optimal Read Normalization Algorithm:
 	Developed by : Dilip A Durai and Marcel H Schulz
+	ORNA uses GATB library for graph building and k-mer counting. We are thankful for their support
 */
 
 #include <gatb/gatb_core.hpp>
@@ -263,7 +264,7 @@ void pairedend(const char* read1, const char* read2, const char* out_file, doubl
 		    itKmer.setData (s1.getData());
 		    itKmer1.setData (s2.getData());
 		    	    
-		    //checking the thresholding
+		    //checking the threshold
 		    acceptance1 = readacceptance(graph, itKmer, model, counter, base);
 		    acceptance2 = readacceptance(graph, itKmer1, model, counter, base);
 		    	    
