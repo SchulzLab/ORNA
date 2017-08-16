@@ -328,10 +328,10 @@ void pairedend(const char* read1, const char* read2, const char* out_file, doubl
 		coun++;
         }
 	std::cout << "kept " << count << " reads" <<  std::endl;
-	bank1->flush();
-	bank2->flush();
+	InputDataset1->flush();
+	InputDataset2->flush();
 	delete [] counter;
-	outBank->flush();
+	OutDataset->flush();
 }
 
 
