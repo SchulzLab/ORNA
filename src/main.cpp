@@ -16,6 +16,7 @@ static const char* STR_OUTPUT = "-output";
 static const char* STR_KMER = "-kmer";
 static const char* STR_PAIR1 = "-pair1";
 static const char* STR_PAIR2 = "-pair2";
+static const char* STR_SORTING = "-sorting";
 
 int readacceptance(Graph graph, Kmer<>::ModelCanonical::Iterator itKmer, Kmer<>::ModelCanonical model, unsigned short *counter, double base){
 	int acceptance=0;
@@ -47,7 +48,9 @@ int readacceptance(Graph graph, Kmer<>::ModelCanonical::Iterator itKmer, Kmer<>:
 	return acceptance;
 }
 
-void singleend(const char* filename, const char* out_file, double base, unsigned short kmer, int nbCores)
+
+
+void singleend(IBank* bank, const char* out_file, double base, unsigned short kmer, int nbCores)
 {
 	int count=0;
 	//const char* error = getError(filename , pair1, pair2);		
@@ -56,7 +59,6 @@ void singleend(const char* filename, const char* out_file, double base, unsigned
 	ISynchronizer* synchro = System::thread().newSynchronizer();	//Locking a section
 
 	//Variables required for GATB
-	IBank* bank = Bank::open (filename);
 	ProgressIterator<Sequence> itSeq (*bank);
 	IBank* outBank = new BankFasta (out_file);
 	
@@ -124,13 +126,8 @@ void singleend(const char* filename, const char* out_file, double base, unsigned
 	outBank->flush();	
 }
 
-void pairedend(const char* read1, const char* read2, const char* out_file, double base, unsigned short kmer )
+void pairedend(IBank* bank1, IBank* bank2, const char* out_file, double base, unsigned short kmer )
 {
-	IBank* bank1 = Bank::open (read1);  
-	LOCAL (bank1);
-        IBank* bank2 = Bank::open (read2);  
-	LOCAL (bank2);
-	
 	IBank* outBank = new BankFasta (out_file);
 
 	Graph graph = Graph::create ("-in %s,%s -kmer-size %d -abundance-min 1", read1, read2, kmer);
@@ -345,7 +342,8 @@ public:
 	        getParser()->push_front (new OptionOneParam (STR_OUTPUT, "Output File",  false, "Normalized.fa"));
 		getParser()->push_front (new OptionOneParam (STR_BASE, "Base for the logarithmic function",  false, "1.7"));
 		getParser()->push_front (new OptionOneParam (STR_PAIR1, "First read of the pair", false, "ORNAERROR" ));
-		getParser()->push_front (new OptionOneParam (STR_PAIR2, "Second read of the pair", false, "ORNAERROR" ));
+		getParser()->push_front (new OptionOneParam (STR_PAIR2, "Second read of the pair", false, "ORNAERROR" ));	
+		getParser()->push_front (new OptionOneParam (STR_SORTING, "Quality Sorting", false, "0" ));
 	}
 	void execute()
 	{
@@ -354,11 +352,16 @@ public:
 		const char* read2= (getInput()->get(STR_PAIR2))->getString();
 		double base=getInput()->getDouble(STR_BASE);
 		int user_kmer = getInput()->getInt(STR_KMER);
+		short sorting = getInput()->getInt(STR_SORTING);
 		const char* out_file= (getInput()->get(STR_OUTPUT))->getString();
 		int nbCores = getInput()->getInt(STR_NB_CORES);
 		unsigned short pairflag = 0; 
 		unsigned short kmer = user_kmer + 1; 
-		unsigned short cores = sysconf(_SC_NPROCESSORS_ONLN); 
+		unsigned short cores = sysconf(_SC_NPROCESSORS_ONLN);
+		IBank* bank;
+		IBank* bank1;
+		IBank* bank2;	
+ 
 		if(nbCores==cores){
 			nbCores=1;		
 		} 
@@ -379,13 +382,33 @@ public:
 		}
 		if(pairflag==0)
 		{
-			std::cout << "Running ORNA in single end mode" << std::endl;
-			singleend(filename, out_file, base, kmer, nbCores);
+			if(sorting==0)
+			{
+				bank = Bank::open (filename)
+				std::cout << "Running ORNA in single end mode" << std::endl;
+				singleend(bank, out_file, base, kmer, nbCores);
+			}
+			else
+			{
+				bank = Bank::open(filename)
+				std::cout << "Running sorting and ORNA in single end mode" << std::endl;
+				sorting(bank, out_file, base, kmer, nbCores);
+			}
 		}
 		else
 		{
-			std::cout << "Running ORNA in paired end mode" << std::endl;
-			pairedend(read1, read2, out_file, base, kmer);
+			if(sorting==0)
+			{
+				bank1 = Bank::open (read1);  
+				LOCAL (bank1);
+				bank2 = Bank::open (read2);  
+				LOCAL (bank2);
+				std::cout << "Running ORNA in paired end mode" << std::endl;
+				pairedend(bank1, bank2, out_file, base, kmer);
+			}
+			else{
+				std::cout << "Sorting does not work in paired end mode. Please combine the files and run it in single end mode" << std::endl;
+			}
 		}	
 	}
 };
