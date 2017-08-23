@@ -1,7 +1,9 @@
 /*
 	Optimal Read Normalization Algorithm:
 	Developed by : Dilip A Durai and Marcel H Schulz
+	ORNA uses GATB library for graph building and k-mer counting. We are thankful for their support
 */
+
 
 #include <gatb/gatb_core.hpp>
 #include <iostream>
@@ -17,6 +19,39 @@ static const char* STR_KMER = "-kmer";
 static const char* STR_PAIR1 = "-pair1";
 static const char* STR_PAIR2 = "-pair2";
 static const char* STR_SORTING = "-sorting";
+
+unsigned short getlength(IBank* bank)
+{
+	Iterator<Sequence>* it = bank->iterator();
+	unsigned short max=0;
+	for (it->first(); !it->isDone(); it->next())
+    	{
+		Sequence& seq = it->item();
+		max = seq.getDataSize();	
+		break;
+    	}
+	return max;		
+}
+int getnumber(IBank* bank)
+{
+	Iterator<Sequence>* it = bank->iterator();
+	int seq_num=0;
+	for (it->first(); !it->isDone(); it->next())
+    	{
+		seq_num++;
+    	}
+	return seq_num;
+}
+
+short calculateQuality(std::string qual)
+{
+	short score=0;
+	for(unsigned int i=0;i<qual.length();i++)
+	{
+		score=score+(int(qual[i]));
+	}
+	return score;
+}
 
 int readacceptance(Graph graph, Kmer<>::ModelCanonical::Iterator itKmer, Kmer<>::ModelCanonical model, unsigned short *counter, double base){
 	int acceptance=0;
@@ -41,26 +76,24 @@ int readacceptance(Graph graph, Kmer<>::ModelCanonical::Iterator itKmer, Kmer<>:
 		if(counter[index] < threshold)
 		{
 			acceptance=acceptance+1;
-			break;			
-			//__sync_fetch_and_add (&counter[index], 1);
+			break;	
 	       	}
 	}
 	return acceptance;
 }
 
-
-
-void singleend(IBank* bank, const char* out_file, double base, unsigned short kmer, int nbCores)
+void singleend(const char* filename, const char* out_file, double base, unsigned short kmer, int nbCores)
 {
 	int count=0;
-	//const char* error = getError(filename , pair1, pair2);		
-		
+	
+	//Multithreading functionality provided by GATB library
 	Dispatcher dispatcher(nbCores) ;
-	ISynchronizer* synchro = System::thread().newSynchronizer();	//Locking a section
+	ISynchronizer* sync = System::thread().newSynchronizer();	//Locking a section
 
 	//Variables required for GATB
-	ProgressIterator<Sequence> itSeq (*bank);
-	IBank* outBank = new BankFasta (out_file);
+	IBank* InputDataset = Bank::open (filename);
+	ProgressIterator<Sequence> itSeq (*InputDataset);
+	IBank* OutDataset = new BankFasta (out_file);
 	
 	//Creating a graph and an iterator. from the parameters. The threshold value is kept as the minimum abundance parameter of the graph. kmer size is the actual kmer+1
 	Graph graph = Graph::create (Bank::open(filename), "-kmer-size %d -abundance-min 1", kmer);
@@ -75,7 +108,7 @@ void singleend(IBank* bank, const char* out_file, double base, unsigned short km
 	    counter[i]=0;
 	}
 
-	//Iterating over sequences
+	//Iterating over sequences the GATB way
 	dispatcher.iterate (itSeq, [&] (Sequence& seq)
 	{
 		int length = seq.getDataSize();
@@ -106,10 +139,10 @@ void singleend(IBank* bank, const char* out_file, double base, unsigned short km
 					__sync_fetch_and_add (&counter[index], 1);
 				}
 			}
-			synchro->lock();
-			outBank->insert(seq);
+			sync->lock();
+			OutDataset->insert(seq);
 			count++;
-			synchro->unlock();
+			sync->unlock();
 		}
 
 	});
@@ -122,12 +155,17 @@ void singleend(IBank* bank, const char* out_file, double base, unsigned short km
 	remove(filename1.c_str());
 	
 	delete [] counter;
-	bank->flush();
-	outBank->flush();	
+	InputDataset->flush();
+	OutDataset->flush();	
 }
 
-void pairedend(IBank* bank1, IBank* bank2, const char* out_file, double base, unsigned short kmer )
+void pairedend(const char* read1, const char* read2, const char* out_file, double base, unsigned short kmer)
 {
+	IBank* bank1 = Bank::open (read1);  
+	LOCAL (bank1);
+	IBank* bank2 = Bank::open (read2);  
+	LOCAL (bank2);
+				
 	IBank* outBank = new BankFasta (out_file);
 
 	Graph graph = Graph::create ("-in %s,%s -kmer-size %d -abundance-min 1", read1, read2, kmer);
@@ -148,14 +186,13 @@ void pairedend(IBank* bank1, IBank* bank2, const char* out_file, double base, un
 	int index;
 	unsigned short length;
 	int tmp=0;
-	        
-	// We iterate the two banks. Note how we provide two iterators from the two banks.
+
         PairedIterator<Sequence> itPair (bank1->iterator(), bank2->iterator());
         for(itPair.first(); !itPair.isDone(); itPair.next())
         {
         	num_sequence++;
         }
-        //int inisize=2;
+        
 	std::vector<int> tempBank;
 	
 	Kmer<>::ModelCanonical model (kmer);
@@ -163,7 +200,6 @@ void pairedend(IBank* bank1, IBank* bank2, const char* out_file, double base, un
 	Kmer<>::ModelCanonical::Iterator itKmer1 (model);
             
 	//Iteration 1	
-	           
 	for (itPair.first(); !itPair.isDone(); itPair.next())
         {
             Sequence& s1 = itPair.item().first;
@@ -245,7 +281,7 @@ void pairedend(IBank* bank1, IBank* bank2, const char* out_file, double base, un
         }
         
 	int coun=0;
-	int tmp_index=0;
+	unsigned int tmp_index=0;
 	std::cout << "Second Iteration" <<  std::endl;
 	
 	for (itPair.first(); !itPair.isDone() && tmp_index<tempBank.size(); itPair.next())
@@ -306,6 +342,8 @@ void pairedend(IBank* bank1, IBank* bank2, const char* out_file, double base, un
 					{
 						threshold=abund;
 					}
+	        
+	// We iterate the two banks. Note how we provide two iterators from the two banks.
 					if(threshold<1)
 					{
 						threshold=1;
@@ -331,13 +369,59 @@ void pairedend(IBank* bank1, IBank* bank2, const char* out_file, double base, un
 	outBank->flush();
 }
 
+void srting(IBank* bank, const char* out_file, double base, unsigned short kmer, int nbCores)
+{
+	std::string s = out_file;
+	std::string srted = "_Sorted.fa";
+	const char* tmpf;
+	s=s+srted;
+	const char* srt_file = s.c_str();
+	ProgressIterator<Sequence> itSeq (*bank);
+	IBank* outBank = new BankFasta (srt_file);
+	unsigned int seq_number=getnumber(bank);		
+	Sequence *sorted = new Sequence[seq_number+1];	
+	unsigned short max = getlength(bank);		
+	unsigned int *quality = new unsigned int[max*75];
+	for(int i=0;i<(max*75);i++)
+	{
+		quality[i]=0;
+	}
+	for(itSeq.first();!itSeq.isDone(); itSeq.next())
+	{
+		Sequence& seq = itSeq.item();
+		std::string qual_string = seq.getQuality();
+		short qual = calculateQuality(qual_string);	
+		quality[max*75-qual]+=1;
+	}
+	for(int i=1;i<(max*75);i++)
+	{
+		quality[i]+=quality[i-1];
+	}
+	for(itSeq.first();!itSeq.isDone(); itSeq.next())
+	{
+		Sequence& seq = itSeq.item();
+		std::string qual_string = seq.getQuality();
+		short qual = calculateQuality(qual_string);
+		sorted[quality[max*75-qual]] = seq;
+		quality[max*75-qual]-=1;	
+	}
+	for(unsigned int i=1;i<seq_number;i++)
+	{
+		outBank->insert(sorted[i]);
+	}
+	outBank->flush();
+	bank->flush();
+	delete [] sorted;
+	delete [] quality;
+	singleend(srt_file, out_file, base, kmer, nbCores);
+}
 
 class ORNA : public Tool
 {
 public:
 	ORNA(): Tool("ORNA")
 	{
-		getParser()->push_front (new OptionOneParam (STR_KMER, "kmer required",  false, "21"));
+		getParser()->push_front (new OptionOneParam (STR_KMER, "kmer required",  false, "21"));				
 	        getParser()->push_front (new OptionOneParam (STR_INPUT, "Input File",  false, "ORNAERROR"));
 	        getParser()->push_front (new OptionOneParam (STR_OUTPUT, "Output File",  false, "Normalized.fa"));
 		getParser()->push_front (new OptionOneParam (STR_BASE, "Base for the logarithmic function",  false, "1.7"));
@@ -384,27 +468,22 @@ public:
 		{
 			if(sorting==0)
 			{
-				bank = Bank::open (filename)
 				std::cout << "Running ORNA in single end mode" << std::endl;
-				singleend(bank, out_file, base, kmer, nbCores);
+				singleend(filename, out_file, base, kmer, nbCores);
 			}
 			else
 			{
-				bank = Bank::open(filename)
+				bank = Bank::open(filename);
 				std::cout << "Running sorting and ORNA in single end mode" << std::endl;
-				sorting(bank, out_file, base, kmer, nbCores);
+				srting(bank, out_file, base, kmer, nbCores);
 			}
 		}
 		else
 		{
 			if(sorting==0)
 			{
-				bank1 = Bank::open (read1);  
-				LOCAL (bank1);
-				bank2 = Bank::open (read2);  
-				LOCAL (bank2);
 				std::cout << "Running ORNA in paired end mode" << std::endl;
-				pairedend(bank1, bank2, out_file, base, kmer);
+				pairedend(read1, read2, out_file, base, kmer);
 			}
 			else{
 				std::cout << "Sorting does not work in paired end mode. Please combine the files and run it in single end mode" << std::endl;
@@ -419,11 +498,11 @@ int main (int argc, char* argv[])
 		ORNA().run(argc,argv);
 		return EXIT_SUCCESS;	
 	}
+
 	catch(Exception& e){
 		std::cout << "EXCEPTION: " << e.getMessage() << std::endl;
         	return EXIT_FAILURE;
 	}
      	
 }
-
 

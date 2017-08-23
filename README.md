@@ -73,13 +73,13 @@ All the analysis for the manuscript was performed on Debain 8 operating system
 short | explanation | note
 -----------|------------|--------
 -help | shows the help message |
--base | Base value for the logarithmic function| 1.7
+-base | Base value for the logarithmic function| Default 1.7
 -kmer | the value of k for kmer size | Default 21
 -input | Input fasta file (for single end mode)| 
 -pair1 | First mate of the pair (for paired-end mode) |
 -pair2 | Second mate of the pair (for paired-end mode) |
 -output | Output fasta file| Default "Normalized.fa"
--nb-cores | number of cores (does not work for paired end mode)| default=0 (all cores) 
+-nb-cores | number of cores (does not work for paired end mode)| Default 1 
 
 kmer value: <br />
 This parameter represents the kmer size to be used for reduction. All the analysis in the paper were done using a kmer size of 21 for reads having length of 50bps and 76bps. If you are running an DBG assembly afterwards, we recommend to use the smallest k-mer used in the assembler. Depending on the dataset memory and runtime requirements will change depending on k.
@@ -92,11 +92,11 @@ This parameter represents the base of the logarithm function used to decide the 
 ```
   ./build/bin/ORNA -input Dataset_name -output Output -base LogBase -kmer kmerSize -nb-cores NumberOfThreads
 ```
-To un ORNA in paired paired end mode from the installation directory 
+* Run ORNA in paired-end mode from the installation directory 
 ```
   ./build/bin/ORNA -pair1 first_pair -pair2 second_pair -output Output -base LogBase -kmer kmerSize
 ```
-For instance, if the dataset to be normalized is named as input.fa, the following command would normalize the dataset using a log base of 1.7 and a kmer size of 21
+* For instance, if the dataset to be normalized is named as input.fa, the following command would normalize the dataset using a log base of 1.7 and a kmer size of 21
 ```
   ./build/bin/ORNA -input input.fa -output output.fa -base 1.7 -kmer 21 -nb-cores 1
 ```
@@ -109,4 +109,4 @@ If you use ORNA in your work please cite:
 Durai DA, Schulz MH. In-silico read normalization with set multicover optimization. [preprint](http://biorxiv.org/content/early/2017/05/04/133579)
 
 ## Acknowledgement
-ORNA uses the [GATB library](https://github.com/GATB) for k-mer counting and we are thankful for their support.
+ORNA uses the [GATB library](https://github.com/GATB) for graph building and k-mer counting. We are thankful for their support.
