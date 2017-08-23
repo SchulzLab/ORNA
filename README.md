@@ -102,8 +102,6 @@ This parameter represents the base of the logarithm function used to decide the 
   ./build/bin/ORNA -input input.fa -output output.fa -base 1.7 -kmer 21 -nb-cores 1
 ```
 
-Note that ORNA only accepts input file in fasta format
-
 ## Citation
 If you use ORNA in your work please cite:
 
