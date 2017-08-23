@@ -36,7 +36,7 @@ ORNA is a read normalization software developed in spirit of [Diginorm](https://
 *	Currently, as ORNA retains all the kmers from the original dataset, it would also retain erroneous kmers. Thus ORNA reduces more reads, like any other tool for read reduction, when the data is error corrected. In case of RNA-seq or other non-uniform data we suggest to use the [SEECER](http://sb.cs.cmu.edu/seecer/) algorithm that proved to work well with ORNA.
 *	ORNA's paired end mode currently does not support multithreading. Work is in progress for this and will be included in the future versions of ORNA
 ## Version
-Version 0.2
+Version 0.3
 
 ## Contact
 For questions or suggestions regarding ORNA contact
@@ -73,6 +73,7 @@ All the analysis for the manuscript was performed on Debain 8 operating system
 short | explanation | note
 -----------|------------|--------
 -help | shows the help message |
+-sorting | (0 or 1) quality based sorting of input data| Default 1.7
 -base | Base value for the logarithmic function| Default 1.7
 -kmer | the value of k for kmer size | Default 21
 -input | Input fasta file (for single end mode)| 
