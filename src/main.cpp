@@ -342,8 +342,6 @@ void pairedend(const char* read1, const char* read2, const char* out_file, doubl
 					{
 						threshold=abund;
 					}
-	        
-	// We iterate the two banks. Note how we provide two iterators from the two banks.
 					if(threshold<1)
 					{
 						threshold=1;
