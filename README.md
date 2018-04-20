@@ -105,7 +105,7 @@ This parameter represents the base of the logarithm function used to decide the 
 ## Citation
 If you use ORNA in your work please cite:
 
-Durai DA, Schulz MH. In-silico read normalization with set multicover optimization. [preprint](http://biorxiv.org/content/early/2017/05/04/133579)
+Durai DA, Schulz MH. In-silico read normalization with set multicover optimization. Bioinformatics 2018 [full text](https://doi.org/10.1093/bioinformatics/bty307)
 
 ## Acknowledgement
 ORNA uses the [GATB library](https://github.com/GATB) for graph building and k-mer counting. We are thankful for their support.
