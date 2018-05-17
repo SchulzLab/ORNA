@@ -81,6 +81,7 @@ short | explanation | note
 -----------|------------|--------
 -help | shows the help message |
 -sorting | (0 or 1) quality based sorting of input data| Default 0
+-ksorting | (0 or 1) kmer abundance based sorting of input data| Default 0
 -base | Base value for the logarithmic function| Default 1.7
 -kmer | the value of k for kmer size | Default 21
 -input | Input fasta file (for single end mode)| 
