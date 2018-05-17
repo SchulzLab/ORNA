@@ -10,6 +10,7 @@
 #include <string.h>
 #include <math.h>
 #include <algorithm>
+#include <thread>
 
 typedef Kmer<>::Type bloom;
 static const char* STR_BASE = "-base";
@@ -19,6 +20,10 @@ static const char* STR_KMER = "-kmer";
 static const char* STR_PAIR1 = "-pair1";
 static const char* STR_PAIR2 = "-pair2";
 static const char* STR_SORTING = "-sorting";
+static const char* STR_KSORTING = "-ksorting";
+static const char* STR_BSIZE = "-binsize";
+static const char* COLL_STAT = "-cs";
+
 
 unsigned short getlength(IBank* bank)
 {
@@ -32,6 +37,7 @@ unsigned short getlength(IBank* bank)
     	}
 	return max;		
 }
+
 int getnumber(IBank* bank)
 {
 	Iterator<Sequence>* it = bank->iterator();
@@ -41,6 +47,49 @@ int getnumber(IBank* bank)
 		seq_num++;
     	}
 	return seq_num;
+}
+
+int getNodesNumber(GraphIterator<Node> it)
+{
+	int count=0;
+	for (it.first(); !it.isDone(); it.next())
+	{
+		count++;
+	}
+	return count;
+}
+
+unsigned int getMedian(Graph graph, Sequence& seq, unsigned short kmer, unsigned int nodeit[])
+{
+	int readabundance = 0;
+	int i=0;
+	int median;
+	short length = seq.getDataSize();	
+	unsigned int *abdce = new unsigned int[(length-kmer)+1];
+	Kmer<>::ModelCanonical model (kmer);
+	Kmer<>::ModelCanonical::Iterator itKmer (model);
+	itKmer.setData (seq.getData());
+	char* data = seq.getDataBuffer();
+	for (itKmer.first(); !itKmer.isDone(); itKmer.next())
+	{
+		std::string s = model.toString (itKmer->value());
+		const char* sq = s.c_str();
+		Node node = graph.buildNode(sq);
+		auto index = graph.nodeMPHFIndex(node);
+		auto abund = nodeit[index];	
+		abdce[i] = abund;
+		i++;		
+	}
+	sort(abdce, abdce+i);
+	if(i%2==0)
+	{
+		median = (abdce[(i/2)] + abdce[(i/2)-1])/2; 
+	}
+	else
+	{
+		median = abdce[(i/2)];		
+	}
+	return median;
 }
 
 short calculateQuality(std::string qual)
@@ -53,7 +102,22 @@ short calculateQuality(std::string qual)
 	return score;
 }
 
-int readacceptance(Graph graph, Kmer<>::ModelCanonical::Iterator itKmer, Kmer<>::ModelCanonical model, unsigned short *counter, double base){
+unsigned long calculateAbundance(Graph graph, Sequence& seq, Kmer<>::ModelCanonical::Iterator itKmer, Kmer<>::ModelCanonical model)
+{
+	short score=0;
+	for (itKmer.first(); !itKmer.isDone(); itKmer.next())
+	{
+		std::string s = model.toString (itKmer->value());
+		const char* sq = s.c_str();
+		Node node = graph.buildNode(sq);
+		double threshold=0;
+		auto index = graph.nodeMPHFIndex(node);
+		auto abund = (int)(graph.queryAbundance(node));
+	}
+	return score;
+}
+
+int readacceptance(Graph graph, Kmer<>::ModelCanonical::Iterator itKmer, Kmer<>::ModelCanonical model, unsigned short *counter, double base, unsigned int *nodeit){
 	int acceptance=0;
 	for (itKmer.first(); !itKmer.isDone(); itKmer.next())
 	{
@@ -61,9 +125,10 @@ int readacceptance(Graph graph, Kmer<>::ModelCanonical::Iterator itKmer, Kmer<>:
 		const char* sq = s.c_str();
 		Node node = graph.buildNode(sq);
 		double threshold=0;
-		//Checking whether the node exists.
+		
 		auto index = graph.nodeMPHFIndex(node);
-		auto abund = graph.queryAbundance(node);
+		auto abund = nodeit[index];
+		
 		threshold = ceil((log(abund)/log(base)));
 		if(threshold>abund)
 		{
@@ -82,24 +147,23 @@ int readacceptance(Graph graph, Kmer<>::ModelCanonical::Iterator itKmer, Kmer<>:
 	return acceptance;
 }
 
-void singleend(const char* filename, const char* out_file, double base, unsigned short kmer, int nbCores)
+void singleend(Graph graph, const char* filename, const char* out_file, double base, unsigned short kmer, int nbCores, unsigned int *nodeit)
 {
 	int count=0;
 	
 	//Multithreading functionality provided by GATB library
 	Dispatcher dispatcher(nbCores) ;
 	ISynchronizer* sync = System::thread().newSynchronizer();	//Locking a section
-
+	GraphIterator<Node> it = graph.iterator();
 	//Variables required for GATB
 	IBank* InputDataset = Bank::open (filename);
 	ProgressIterator<Sequence> itSeq (*InputDataset);
-	IBank* OutDataset = new BankFasta (out_file);
+	IBank* OutDataset = new BankFasta (out_file, true);
 	
-	//Creating a graph and an iterator. from the parameters. The threshold value is kept as the minimum abundance parameter of the graph. kmer size is the actual kmer+1
-	Graph graph = Graph::create (Bank::open(filename), "-kmer-size %d -abundance-min 1", kmer);
-	GraphIterator<Node> it = graph.iterator();
+	//int node_size= it.size();
+	int node_size= it.size();	
+	//Creating a graph and an iterator. from the Graph graphparameters. The threshold value is kept as the minimum abundance parameter of the graph. kmer size is the actual kmer+1
 
-	long node_size= it.size();
 	unsigned short *counter = new unsigned short[node_size];
 
 	//Initializing the counter for each node in the de Bruijn graph
@@ -115,7 +179,6 @@ void singleend(const char* filename, const char* out_file, double base, unsigned
 		int flag=1;
 		int gb = 1;
 		int acceptance=0;
-
 		Kmer<>::ModelCanonical model (kmer);
 		Kmer<>::ModelCanonical::Iterator itKmer (model);
 		itKmer.setData (seq.getData());
@@ -123,14 +186,40 @@ void singleend(const char* filename, const char* out_file, double base, unsigned
 	
 		//checking the thresholding
 		if(flag==1){
-			acceptance=readacceptance(graph, itKmer, model, counter, base);
+			//acceptance=readacceptance(graph, itKmer, model, counter, base, nodeit);
+			for (itKmer.first(); !itKmer.isDone(); itKmer.next())
+			{
+				std::string s = model.toString (itKmer->value());
+				const char* sq = s.c_str();
+				Node node = graph.buildNode(sq);
+				double threshold=0;
+		
+				auto index = graph.nodeMPHFIndex(node);
+				auto abund = nodeit[index];
+		
+				threshold = ceil((log(abund)/log(base)));
+				if(threshold>abund)
+				{
+					threshold=abund;
+				}
+				if(threshold<1)
+				{
+					threshold=1;
+				}
+				if(counter[index] < threshold)
+				{
+					acceptance=acceptance+1;
+					break;	
+			       	}
+			}
 		}
 		if(acceptance > 0)
 		{
 			for (itKmer.first(); !itKmer.isDone(); itKmer.next())
 			{
 				std::string s = model.toString (itKmer->value());
-				const char* sq = s.c_str(); 
+				const char* sq = s.c_str();
+ 
 				Node node = graph.buildNode(sq);
 				//Checking whether the node exists.
 				if(graph.contains(node))
@@ -144,7 +233,6 @@ void singleend(const char* filename, const char* out_file, double base, unsigned
 			count++;
 			sync->unlock();
 		}
-
 	});
 	std::cout << "Kept " << count << " reads" <<  std::endl;
 
@@ -165,19 +253,7 @@ void pairedend(const char* read1, const char* read2, const char* out_file, doubl
 	LOCAL (bank1);
 	IBank* bank2 = Bank::open (read2);  
 	LOCAL (bank2);
-				
-	IBank* outBank = new BankFasta (out_file);
-
-	Graph graph = Graph::create ("-in %s,%s -kmer-size %d -abundance-min 1", read1, read2, kmer);
-	GraphIterator<Node> NodeIterator = graph.iterator();	
-	long node_size= NodeIterator.size();
-	unsigned short *counter = new unsigned short[node_size];
 	
-	for(int i=0;i<node_size;i++)
-        {
-            counter[i]=0;
-        }
-
 	int cnt=0;
 	int count=0;
 	int num_sequence=0;	
@@ -186,6 +262,28 @@ void pairedend(const char* read1, const char* read2, const char* out_file, doubl
 	int index;
 	unsigned short length;
 	int tmp=0;
+				
+	IBank* outBank = new BankFasta (out_file);
+
+	Graph graph = Graph::create ("-in %s,%s -kmer-size %d -abundance-min 1", read1, read2, kmer);
+	GraphIterator<Node> NodeIterator = graph.iterator();	
+	long node_size= NodeIterator.size();
+	unsigned short *counter = new unsigned short[node_size];
+
+	std::cout << "Populating node abundances" << std::endl;
+	
+	GraphIterator<Node> it = graph.iterator();
+	unsigned int *nodeit = new unsigned int[getNodesNumber(it)];	
+	int cont=0;
+	for (it.first(); !it.isDone(); it.next())
+	{
+		nodeit[cont]=0;
+		cont=cont+1;
+	}
+	for(int i=0;i<node_size;i++)
+        {
+            counter[i]=0;
+        }
 
         PairedIterator<Sequence> itPair (bank1->iterator(), bank2->iterator());
         for(itPair.first(); !itPair.isDone(); itPair.next())
@@ -212,9 +310,9 @@ void pairedend(const char* read1, const char* read2, const char* out_file, doubl
 	    itKmer1.setData (s2.getData());
 	    	    
 	    //checking the thresholding
-	    acceptance1 = readacceptance(graph, itKmer, model, counter, base);
-	    acceptance2 = readacceptance(graph, itKmer1, model, counter, base);
-	    if(acceptance1 > 0 && acceptance2>0)
+	    acceptance1 = readacceptance(graph, itKmer, model, counter, base, nodeit);
+	    acceptance2 = readacceptance(graph, itKmer1, model, counter, base, nodeit);
+	    if(acceptance1>0 && acceptance2>0)
 	    {
 		for (itKmer.first(); !itKmer.isDone(); itKmer.next())
 	    	{
@@ -226,7 +324,7 @@ void pairedend(const char* read1, const char* read2, const char* out_file, doubl
 			if(graph.contains(node))
 			{
 				auto index = graph.nodeMPHFIndex(node);
-				auto abund = graph.queryAbundance(node);
+				auto abund = nodeit[index];
 				threshold = ceil((log(abund)/log(base)));
 				if(threshold>abund)
 				{
@@ -252,7 +350,7 @@ void pairedend(const char* read1, const char* read2, const char* out_file, doubl
 			if(graph.contains(node))
 			{
 				auto index = graph.nodeMPHFIndex(node);
-				auto abund = graph.queryAbundance(node);
+				auto abund = nodeit[index];
 				threshold = ceil((log(abund)/log(base)));
 				if(threshold>abund)
 				{
@@ -299,8 +397,8 @@ void pairedend(const char* read1, const char* read2, const char* out_file, doubl
 		    itKmer1.setData (s2.getData());
 		    	    
 		    //checking the thresholding
-		    acceptance1 = readacceptance(graph, itKmer, model, counter, base);
-		    acceptance2 = readacceptance(graph, itKmer1, model, counter, base);
+		    acceptance1 = readacceptance(graph, itKmer, model, counter, base, nodeit);
+		    acceptance2 = readacceptance(graph, itKmer1, model, counter, base, nodeit);
 		    	    
 		    if(acceptance1 > 0 || acceptance2 > 0)
 		    {
@@ -313,7 +411,7 @@ void pairedend(const char* read1, const char* read2, const char* out_file, doubl
 				//Checking whether the node exists.
 				if(graph.contains(node)){
 					auto index = graph.nodeMPHFIndex(node);
-					auto abund = graph.queryAbundance(node);
+					auto abund = nodeit[index];
 					threshold = ceil((log(abund)/log(base)));
 					if(threshold>abund){
 						threshold=abund;
@@ -336,7 +434,7 @@ void pairedend(const char* read1, const char* read2, const char* out_file, doubl
 				if(graph.contains(node))
 				{
 					auto index = graph.nodeMPHFIndex(node);
-					auto abund = graph.queryAbundance(node);
+					auto abund = nodeit[index];
 					threshold = ceil((log(abund)/log(base)));
 					if(threshold>abund)
 					{
@@ -367,15 +465,16 @@ void pairedend(const char* read1, const char* read2, const char* out_file, doubl
 	outBank->flush();
 }
 
-void srting(IBank* bank, const char* out_file, double base, unsigned short kmer, int nbCores)
+
+void srting(Graph graph, IBank* bank, const char* out_file, double base, unsigned short kmer, int nbCores, unsigned int *nodeit)
 {
 	std::string s = out_file;
-	std::string srted = "_Sorted.fa";
+	std::string srted = "_Sorted.fq";
 	const char* tmpf;
 	s=s+srted;
 	const char* srt_file = s.c_str();
 	ProgressIterator<Sequence> itSeq (*bank);
-	IBank* outBank = new BankFasta (srt_file);
+	IBank* outBank = new BankFasta (srt_file, true);
 	unsigned int seq_number=getnumber(bank);		
 	Sequence *sorted = new Sequence[seq_number+1];	
 	unsigned short max = getlength(bank);		
@@ -411,7 +510,151 @@ void srting(IBank* bank, const char* out_file, double base, unsigned short kmer,
 	bank->flush();
 	delete [] sorted;
 	delete [] quality;
-	singleend(srt_file, out_file, base, kmer, nbCores);
+	singleend(graph, srt_file, out_file, base, kmer, nbCores, nodeit);
+}
+
+void ksrting(Graph graph, IBank* bank, const char* out_file, double base, unsigned short kmer, int nbCores, unsigned int nodeit[], short bsize, short cs)
+{
+	std::string s = out_file;
+	std::string srted = "_Sorted.fq";
+	
+	s=s+srted;
+	unsigned int sqn = getnumber(bank);
+	//Iterating over nodes of the graphs to get the max abundance
+	ProgressIterator<Sequence> itSeq (*bank);
+	unsigned int *kmerit = new unsigned int[bsize];
+	unsigned int *kmeridx = new unsigned int[bsize];
+	std::map<std::string, unsigned int> abd;	
+	//unsigned int *abd = new unsigned int[sqn+1];
+	IBank* outBank = new BankFasta (s.c_str(), true);
+	Sequence *sorted = new Sequence[sqn+1];	
+	unsigned int max = 0;
+	Dispatcher dispatcher(1) ;
+	ISynchronizer* sync = System::thread().newSynchronizer();	//Locking a section
+		
+	auto idx=0;
+	Kmer<>::ModelCanonical model (kmer);
+	Kmer<>::ModelCanonical::Iterator itKmer (model);
+	
+	if(cs==0)
+	{
+		for(unsigned int i=0;i<bsize;i++)
+		{
+			kmerit[i] = 0;
+			kmeridx[(bsize-1)-i] = i*1000;
+		}
+	}
+	else
+	{
+		for(unsigned int i=0;i<bsize;i++)
+		{
+			kmerit[i] = 0;
+			kmeridx[i] = i*1000;
+		}
+	}	
+	unsigned int cont = 0;
+	unsigned int readabundance; 
+	int index =0;	
+	int flag1 = 1000;
+	dispatcher.iterate (itSeq, [&] (Sequence& seq)
+	{
+		cont++;
+		sync->lock();						
+		readabundance = getMedian(graph, seq, kmer, nodeit);
+		sync->unlock();
+		if(cs == 0)
+		{		
+			abd[seq.toString()]=readabundance;		
+			for(unsigned int i=0;i<bsize;i++)
+			{
+				if(i<(bsize-1))
+				{	
+					if(readabundance<=kmeridx[i] && readabundance>kmeridx[i+1])
+					{
+						__sync_fetch_and_add (&kmerit[i], 1);
+						break;
+					}
+				}
+				else
+				{
+					if(readabundance<=kmeridx[i])
+					{
+						__sync_fetch_and_add (&kmerit[i], 1);
+						break;
+					}
+				}
+			}
+		}
+		else
+		{
+			if(cont <= flag1)
+			{
+				kmerit[index]+=readabundance; 
+			}
+			else
+			{
+				flag1=flag1+1000;
+				kmerit[index]=kmerit[index]/1000;
+				index++;
+			}
+		}
+	});
+	if(cs == 0)
+	{
+		cont = 0;
+		for(int i=1;i<bsize;i++)
+		{
+			kmerit[i]+=kmerit[i-1];
+		}
+	
+		std::cout << "Started sorting the dataset" << std::endl;
+		for(itSeq.first(); !itSeq.isDone(); itSeq.next())
+		{
+			Sequence& seq1 = itSeq.item();
+			unsigned int readabundance = abd.at(seq1.toString());		
+			for(unsigned int j=0;j<bsize;j++)
+			{
+				if(j<(bsize-1))
+				{	
+					if(readabundance<=kmeridx[j] && readabundance>kmeridx[j+1])
+					{
+						sorted[kmerit[j]] = seq1;
+						kmerit[j]-=1;					
+						break;
+					}
+				}
+				else
+				{
+					if(readabundance<=kmeridx[j])
+					{
+						sorted[kmerit[j]] = seq1;
+						kmerit[j]-=1;					
+						break;
+					}
+				}
+			}
+			cont++;
+		}	
+		
+		std::cout << "Finishing Sorting of dataset" << std::endl;
+		for(unsigned int i=0;i<sqn;i++)
+		{
+			outBank->insert(sorted[i]);
+		}
+		outBank->flush();
+	
+		delete [] sorted;
+		delete [] kmeridx;
+		delete [] kmerit;
+		singleend(graph, s.c_str(), out_file, base, kmer, nbCores, nodeit);
+	}
+	else
+	{
+		for(unsigned int i=0;i<bsize;i++)
+		{
+			std::cout << kmerit[i] << std::endl;
+		}
+	}
 }
 
 class ORNA : public Tool
@@ -426,6 +669,9 @@ public:
 		getParser()->push_front (new OptionOneParam (STR_PAIR1, "First read of the pair", false, "ORNAERROR" ));
 		getParser()->push_front (new OptionOneParam (STR_PAIR2, "Second read of the pair", false, "ORNAERROR" ));	
 		getParser()->push_front (new OptionOneParam (STR_SORTING, "Quality Sorting", false, "0" ));
+		getParser()->push_front (new OptionOneParam (STR_KSORTING, "Kmer based Sorting", false, "0" ));
+		getParser()->push_front (new OptionOneParam (STR_BSIZE, "Bin Size", false, "1000" ));
+		getParser()->push_front (new OptionOneParam (COLL_STAT, "Collect stat", false, "0" ));
 	}
 	void execute()
 	{
@@ -435,8 +681,11 @@ public:
 		double base=getInput()->getDouble(STR_BASE);
 		int user_kmer = getInput()->getInt(STR_KMER);
 		short sorting = getInput()->getInt(STR_SORTING);
+		short ksorting = getInput()->getInt(STR_KSORTING);		
 		const char* out_file= (getInput()->get(STR_OUTPUT))->getString();
 		int nbCores = getInput()->getInt(STR_NB_CORES);
+		short bsize = getInput()->getInt(STR_BSIZE);
+		short cs = getInput()->getInt(COLL_STAT);		
 		unsigned short pairflag = 0; 
 		unsigned short kmer = user_kmer + 1; 
 		unsigned short cores = sysconf(_SC_NPROCESSORS_ONLN);
@@ -464,16 +713,40 @@ public:
 		}
 		if(pairflag==0)
 		{
-			if(sorting==0)
+			bank = Bank::open (filename);
+			Graph graph = Graph::create (Bank::open(filename), "-kmer-size %d -abundance-min 1", kmer);
+			GraphIterator<Node> it = graph.iterator();
+			unsigned int *nodeit = new unsigned int[it.size()+1];	
+			
+			std::cout << "Populating node abundances" << std::endl;
+			int cont=0;
+			for (it.first(); !it.isDone(); it.next())
 			{
-				std::cout << "Running ORNA in single end mode" << std::endl;
-				singleend(filename, out_file, base, kmer, nbCores);
+				nodeit[cont]=0;
+				cont=cont+1;
+			}	
+				
+			for (it.first(); !it.isDone(); it.next())
+			{
+				auto idx = graph.nodeMPHFIndex(it.item());				
+				nodeit[idx]=(it.item()).abundance;
+			}
+			std::cout << "Done populating node abundances" << std::endl;
+						
+			if(sorting==1)
+			{
+				std::cout << "Running sorting and ORNA in single end mode" << std::endl;
+				srting(graph, bank, out_file, base, kmer, nbCores, nodeit);			
+			}
+			else if (ksorting==1)
+			{
+				std::cout << "Running kmer based sorting and ORNA in single end mode" << std::endl;
+				ksrting(graph, bank, out_file, base, kmer, nbCores, nodeit, bsize, cs);
 			}
 			else
 			{
-				bank = Bank::open(filename);
-				std::cout << "Running sorting and ORNA in single end mode" << std::endl;
-				srting(bank, out_file, base, kmer, nbCores);
+				std::cout << "Running ORNA in single end mode" << std::endl;
+				singleend(graph, filename, out_file, base, kmer, nbCores, nodeit);
 			}
 		}
 		else
@@ -493,7 +766,7 @@ public:
 int main (int argc, char* argv[])
 {
 	try{
-		ORNA().run(argc,argv);
+        ORNA().run(argc,argv);
 		return EXIT_SUCCESS;	
 	}
 
