@@ -6,9 +6,9 @@ ORNA is a read normalization software developed in spirit of [Diginorm](https://
 
 ## ORNA-Q and ORNA-K
 Erroneous reads generally have low abundance kmers and base(s) having low quality score. These reads generally degrades the quality of the assembly produced from the dataset. Since ORNA ignores the ordering of the reads and traverse the dataset sequentially, there is a chance that keep high percentage of erroneous reads if they occur at the start of the dataset. To tackle this issue, ORNA has two additional modes: 
-# ORNA-Q (parameter: -sorting 1):
+### ORNA-Q (parameter: -sorting 1):
 In this mode, ORNA apart from preserving all the labels from the original dataset, also maximizes the total read quality score of normalized dataset. Read quality score of a read is defined as the sum of phred qualities of bases in the read. ORNA-Q sorts the input dataset on the bases of read quality score using count sort algorithm such that the read with the highest quality score is at the top. The sorted set of reads is then normalized using ORNA.     
-# ORNA-K (parameter: -ksorting 1)
+### ORNA-K (parameter: -ksorting 1)
 In this mode, the normalization algorithm maximizes the total read abundance score of the normalized dataset (apart from preserving all labels from the original dataset). Read abundance score of a read is defined as the median of abundances of kmers present in the read. Like ORNA-Q, ORNA-K also sorts the input dataset on the bases on median kmer abundances of the reads in the dataset and runs ORNA on the sorted set of reads. 
 
 ## ORNA Algorithm
