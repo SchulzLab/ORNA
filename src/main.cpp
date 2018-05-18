@@ -711,55 +711,61 @@ public:
 				pairflag = 1; 
 			}				
 		}
-		if(pairflag==0)
+		if(sorting == 1 && ksorting == 1)
 		{
-			bank = Bank::open (filename);
-			Graph graph = Graph::create (Bank::open(filename), "-kmer-size %d -abundance-min 1", kmer);
-			GraphIterator<Node> it = graph.iterator();
-			unsigned int *nodeit = new unsigned int[it.size()+1];	
-			
-			std::cout << "Populating node abundances" << std::endl;
-			int cont=0;
-			for (it.first(); !it.isDone(); it.next())
+			std::cout << "Error: ORNA-Q and ORNA-K cant be set to 1 at the same time" << std::endl;
+		}
+		else
+		{	
+			if(pairflag==0)
 			{
-				nodeit[cont]=0;
-				cont=cont+1;
-			}	
-				
-			for (it.first(); !it.isDone(); it.next())
-			{
-				auto idx = graph.nodeMPHFIndex(it.item());				
-				nodeit[idx]=(it.item()).abundance;
-			}
-			std::cout << "Done populating node abundances" << std::endl;
-						
-			if(sorting==1)
-			{
-				std::cout << "Running sorting and ORNA in single end mode" << std::endl;
-				srting(graph, bank, out_file, base, kmer, nbCores, nodeit);			
-			}
-			else if (ksorting==1)
-			{
-				std::cout << "Running kmer based sorting and ORNA in single end mode" << std::endl;
-				ksrting(graph, bank, out_file, base, kmer, nbCores, nodeit, bsize, cs);
+				bank = Bank::open (filename);
+				Graph graph = Graph::create (Bank::open(filename), "-kmer-size %d -abundance-min 1", kmer);
+				GraphIterator<Node> it = graph.iterator();
+				unsigned int *nodeit = new unsigned int[it.size()+1];	
+
+				std::cout << "Populating node abundances" << std::endl;
+				int cont=0;
+				for (it.first(); !it.isDone(); it.next())
+				{
+					nodeit[cont]=0;
+					cont=cont+1;
+				}	
+
+				for (it.first(); !it.isDone(); it.next())
+				{
+					auto idx = graph.nodeMPHFIndex(it.item());				
+					nodeit[idx]=(it.item()).abundance;
+				}
+				std::cout << "Done populating node abundances" << std::endl;
+				if(sorting==1)
+				{
+					std::cout << "Running ORNA-Q and ORNA in single end mode" << std::endl;
+					srting(graph, bank, out_file, base, kmer, nbCores, nodeit);			
+				}
+				else if (ksorting==1)
+				{
+					std::cout << "Running ORNA-K in single end mode" << std::endl;
+					ksrting(graph, bank, out_file, base, kmer, nbCores, nodeit, bsize, cs);
+				}
+				else
+				{
+					std::cout << "Running ORNA in single end mode" << std::endl;
+					singleend(graph, filename, out_file, base, kmer, nbCores, nodeit);
+				}
 			}
 			else
 			{
-				std::cout << "Running ORNA in single end mode" << std::endl;
-				singleend(graph, filename, out_file, base, kmer, nbCores, nodeit);
+				if(sorting==0)
+				{
+					std::cout << "Running ORNA in paired end mode" << std::endl;
+					pairedend(read1, read2, out_file, base, kmer);
+				}
+				else{
+					std::cout << "Sorting does not work in paired end mode. Please combine the files and run it in single end mode" << std::endl;
+				}
 			}
 		}
-		else
-		{
-			if(sorting==0)
-			{
-				std::cout << "Running ORNA in paired end mode" << std::endl;
-				pairedend(read1, read2, out_file, base, kmer);
-			}
-			else{
-				std::cout << "Sorting does not work in paired end mode. Please combine the files and run it in single end mode" << std::endl;
-			}
-		}	
 	}
 };
 
