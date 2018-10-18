@@ -89,7 +89,8 @@ short | explanation | note
 -pair1 | First mate of the pair (for paired-end mode) |
 -pair2 | Second mate of the pair (for paired-end mode) |
 -output | Output fasta file| Default "Normalized.fa"
--nb-cores | number of cores (does not work for paired end mode)| Default 1 
+-nb-cores | number of cores (does not work for paired end mode)| Default 1
+-type | type of the output file (fasta/fastq)| Default fasta
 
 kmer value: <br />
 This parameter represents the kmer size to be used for reduction. As we aim at preserving all the edge lables ((k+1)-mers) from the original dataset, internally the kmer size given by the user would be incremented by 1. For instance, if the user provides a kmer size of 21, then ORNA would increment the kmer size to 22 for all its calculations. All the analysis in the paper were done using a kmer size of 21 for reads having length of 50bps and 76bps. If you are running an DBG assembly afterwards, we recommend to use the smallest k-mer used in the assembler. Depending on the dataset memory and runtime requirements will change depending on k.
@@ -100,11 +101,11 @@ This parameter represents the base of the logarithm function used to decide the 
 ## Running ORNA
 * To run ORNA, execute the following command from the installation directory
 ```
-  ./build/bin/ORNA -input Dataset_name -output Output -base LogBase -kmer kmerSize -nb-cores NumberOfThreads
+  ./build/bin/ORNA -input Dataset_name -output Output -base LogBase -kmer kmerSize -nb-cores NumberOfThreads -type fasta
 ```
 * Run ORNA in paired-end mode from the installation directory 
 ```
-  ./build/bin/ORNA -pair1 first_pair -pair2 second_pair -output Output -base LogBase -kmer kmerSize
+  ./build/bin/ORNA -pair1 first_pair -pair2 second_pair -output Output -base LogBase -kmer kmerSize -type fasta
 ```
 * For instance, if the dataset to be normalized is named as input.fa, the following command would normalize the dataset using a log base of 1.7 and a kmer size of 21
 ```
