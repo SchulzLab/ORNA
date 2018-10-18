@@ -88,7 +88,7 @@ short | explanation | note
 -input | Input fasta file (for single end mode)| 
 -pair1 | First mate of the pair (for paired-end mode) |
 -pair2 | Second mate of the pair (for paired-end mode) |
--output | Output fasta file| Default "Normalized.fa"
+-output | Prefix of the output file| Default "Normalized"
 -nb-cores | number of cores (does not work for paired end mode)| Default 1
 -type | type of the output file (fasta/fastq)| Default fasta
 
