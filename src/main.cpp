@@ -23,6 +23,7 @@ static const char* STR_SORTING = "-sorting";
 static const char* STR_KSORTING = "-ksorting";
 static const char* STR_BSIZE = "-binsize";
 static const char* COLL_STAT = "-cs";
+static const char* STR_TYPE = "-type";
 
 
 unsigned short getlength(IBank* bank)
@@ -147,10 +148,9 @@ int readacceptance(Graph graph, Kmer<>::ModelCanonical::Iterator itKmer, Kmer<>:
 	return acceptance;
 }
 
-void singleend(Graph graph, const char* filename, const char* out_file, double base, unsigned short kmer, int nbCores, unsigned int *nodeit)
+void singleend(Graph graph, const char* filename, const char* out_file, double base, unsigned short kmer, int nbCores, unsigned int *nodeit, const char* type)
 {
 	int count=0;
-	
 	//Multithreading functionality provided by GATB library
 	Dispatcher dispatcher(nbCores) ;
 	ISynchronizer* sync = System::thread().newSynchronizer();	//Locking a section
@@ -158,7 +158,26 @@ void singleend(Graph graph, const char* filename, const char* out_file, double b
 	//Variables required for GATB
 	IBank* InputDataset = Bank::open (filename);
 	ProgressIterator<Sequence> itSeq (*InputDataset);
-	IBank* OutDataset = new BankFasta (out_file, true);
+	IBank* OutDataset;
+	std::string tmpfile = out_file;
+	std::string out_file1;
+	std:string extension;
+	const char* finalout;
+	
+	if((strcmp(type,"fastq")==0) or (strcmp(type,"fq")==0) or (strcmp(type,"FASTQ")==0) or (strcmp(type,"FQ")==0))
+	{
+		extension=".fq";
+		out_file1=tmpfile+extension;
+		finalout=out_file1.c_str();
+		OutDataset = new BankFasta (finalout, true);	
+	}
+	else
+	{
+		extension=".fa";
+		out_file1=tmpfile+extension;
+		finalout=out_file1.c_str();
+		OutDataset = new BankFasta (finalout, true);
+	}
 	
 	//int node_size= it.size();
 	int node_size= it.size();	
@@ -247,7 +266,7 @@ void singleend(Graph graph, const char* filename, const char* out_file, double b
 	OutDataset->flush();	
 }
 
-void pairedend(const char* read1, const char* read2, const char* out_file, double base, unsigned short kmer)
+void pairedend(const char* read1, const char* read2, const char* out_file, double base, unsigned short kmer, const char* type)
 {
 	IBank* bank1 = Bank::open (read1);  
 	LOCAL (bank1);
@@ -262,8 +281,33 @@ void pairedend(const char* read1, const char* read2, const char* out_file, doubl
 	int index;
 	unsigned short length;
 	int tmp=0;
-				
-	IBank* outBank = new BankFasta (out_file);
+	IBank* outBank1;
+	IBank* outBank2;
+	std::string tmpout=out_file;
+	std::string tmp1;
+	std::string tmp2;
+
+	const char* out_file1;
+	const char* out_file2;
+		
+	if((strcmp(type,"fastq")==0) or (strcmp(type,"fq")==0) or (strcmp(type,"FASTQ")==0) or (strcmp(type,"FQ")==0))
+	{
+		tmp1=tmpout+"_1.fq";
+		tmp2=tmpout+"_2.fq";
+		out_file1 = tmp1.c_str();
+		out_file2 = tmp2.c_str();;
+		outBank1 = new BankFasta (out_file1, true);
+		outBank2 = new BankFasta (out_file2, true);	
+	}
+	else
+	{
+		tmp1=tmpout+"_1.fa";
+		tmp2=tmpout+"_2.fa";
+		out_file1 = tmp1.c_str();
+		out_file2 = tmp2.c_str();;
+		outBank1 = new BankFasta (out_file1);
+		outBank2 = new BankFasta (out_file2);
+	}
 
 	Graph graph = Graph::create ("-in %s,%s -kmer-size %d -abundance-min 1", read1, read2, kmer);
 	GraphIterator<Node> NodeIterator = graph.iterator();	
@@ -366,8 +410,8 @@ void pairedend(const char* read1, const char* read2, const char* out_file, doubl
 				}
 			}
 	    	}
-	    	outBank->insert(s1);
-		outBank->insert(s2);
+	    	outBank1->insert(s1);
+		outBank2->insert(s2);
 		count++;
 	    }
 	    else if(acceptance1>0 || acceptance2>0){
@@ -450,32 +494,48 @@ void pairedend(const char* read1, const char* read2, const char* out_file, doubl
 					}
 				}
 		    	}
-			outBank->insert(s1);
-			outBank->insert(s2);
+			outBank1->insert(s1);
+			outBank2->insert(s2);
 			count++;
 		   }
 		   tmp_index++;
 		}
 		coun++;
         }
-	std::cout << "kept " << count << " reads" <<  std::endl;
+	std::cout << "kept " << count << " pairs" <<  std::endl;
 	bank1->flush();
 	bank2->flush();
 	delete [] counter;
-	outBank->flush();
+	outBank1->flush();
+	outBank2->flush();
 }
 
 
-void srting(Graph graph, IBank* bank, const char* out_file, double base, unsigned short kmer, int nbCores, unsigned int *nodeit)
+void srting(Graph graph, IBank* bank, const char* out_file, double base, unsigned short kmer, int nbCores, unsigned int *nodeit, const char* type)
 {
+	IBank* outBank;
 	std::string s = out_file;
-	std::string srted = "_Sorted.fq";
-	const char* tmpf;
-	s=s+srted;
-	const char* srt_file = s.c_str();
+	std::string srted;
 	ProgressIterator<Sequence> itSeq (*bank);
-	IBank* outBank = new BankFasta (srt_file, true);
 	unsigned int seq_number=getnumber(bank);		
+	const char* srt_file;
+
+	if((strcmp(type,"fastq")==0) or (strcmp(type,"fq")==0) or (strcmp(type,"FASTQ")==0) or (strcmp(type,"FQ")==0))
+	{
+		srted = "_Sorted.fq";
+		s=s+srted;
+		srt_file=s.c_str();
+		outBank = new BankFasta (s.c_str(), true);	
+	}
+	else
+	{
+		srted = "_Sorted.fa";
+		s=s+srted;
+		srt_file=s.c_str();
+		outBank = new BankFasta (s.c_str());
+	}
+	const char* tmpf;
+	//const char* srt_file = s.c_str();
 	Sequence *sorted = new Sequence[seq_number+1];	
 	unsigned short max = getlength(bank);		
 	unsigned int *quality = new unsigned int[max*75];
@@ -510,15 +570,30 @@ void srting(Graph graph, IBank* bank, const char* out_file, double base, unsigne
 	bank->flush();
 	delete [] sorted;
 	delete [] quality;
-	singleend(graph, srt_file, out_file, base, kmer, nbCores, nodeit);
+	singleend(graph, srt_file, out_file, base, kmer, nbCores, nodeit, type);
 }
 
-void ksrting(Graph graph, IBank* bank, const char* out_file, double base, unsigned short kmer, int nbCores, unsigned int nodeit[], short bsize, short cs)
+void ksrting(Graph graph, IBank* bank, const char* out_file, double base, unsigned short kmer, int nbCores, unsigned int nodeit[], short bsize, short cs, const char* type)
 {
 	std::string s = out_file;
-	std::string srted = "_Sorted.fq";
-	
-	s=s+srted;
+	IBank* outBank;
+	std::string srted;
+	const char* srt_file;
+
+	if((strcmp(type,"fastq")==0) or (strcmp(type,"fq")==0) or (strcmp(type,"FASTQ")==0) or (strcmp(type,"FQ")==0))
+	{
+		srted = "_Sorted.fq";
+		s=s+srted;
+		srt_file=s.c_str();
+		outBank = new BankFasta (s.c_str(), true);	
+	}
+	else
+	{
+		srted = "_Sorted.fa";
+		s=s+srted;
+		srt_file=s.c_str();
+		outBank = new BankFasta (s.c_str());
+	}
 	unsigned int sqn = getnumber(bank);
 	//Iterating over nodes of the graphs to get the max abundance
 	ProgressIterator<Sequence> itSeq (*bank);
@@ -526,7 +601,6 @@ void ksrting(Graph graph, IBank* bank, const char* out_file, double base, unsign
 	unsigned int *kmeridx = new unsigned int[bsize];
 	std::map<std::string, unsigned int> abd;	
 	//unsigned int *abd = new unsigned int[sqn+1];
-	IBank* outBank = new BankFasta (s.c_str(), true);
 	Sequence *sorted = new Sequence[sqn+1];	
 	unsigned int max = 0;
 	Dispatcher dispatcher(1) ;
@@ -646,7 +720,7 @@ void ksrting(Graph graph, IBank* bank, const char* out_file, double base, unsign
 		delete [] sorted;
 		delete [] kmeridx;
 		delete [] kmerit;
-		singleend(graph, s.c_str(), out_file, base, kmer, nbCores, nodeit);
+		singleend(graph, srt_file, out_file, base, kmer, nbCores, nodeit, type);
 	}
 	else
 	{
@@ -664,13 +738,14 @@ public:
 	{
 		getParser()->push_front (new OptionOneParam (STR_KMER, "kmer required",  false, "21"));				
 	        getParser()->push_front (new OptionOneParam (STR_INPUT, "Input File",  false, "ORNAERROR"));
-	        getParser()->push_front (new OptionOneParam (STR_OUTPUT, "Output File",  false, "Normalized.fa"));
+	        getParser()->push_front (new OptionOneParam (STR_OUTPUT, "Prefix of the output File",  false, "Normalized"));
 		getParser()->push_front (new OptionOneParam (STR_BASE, "Base for the logarithmic function",  false, "1.7"));
 		getParser()->push_front (new OptionOneParam (STR_PAIR1, "First read of the pair", false, "ORNAERROR" ));
 		getParser()->push_front (new OptionOneParam (STR_PAIR2, "Second read of the pair", false, "ORNAERROR" ));	
 		getParser()->push_front (new OptionOneParam (STR_SORTING, "Quality Sorting", false, "0" ));
 		getParser()->push_front (new OptionOneParam (STR_KSORTING, "Kmer based Sorting", false, "0" ));
 		getParser()->push_front (new OptionOneParam (STR_BSIZE, "Bin Size", false, "1000" ));
+		getParser()->push_front (new OptionOneParam (STR_TYPE, "Type for the output file (fasta/fastq)", false, "fasta" ));
 		getParser()->push_front (new OptionOneParam (COLL_STAT, "Collect stat", false, "0" ));
 	}
 	void execute()
@@ -689,6 +764,7 @@ public:
 		unsigned short pairflag = 0; 
 		unsigned short kmer = user_kmer + 1; 
 		unsigned short cores = sysconf(_SC_NPROCESSORS_ONLN);
+		const char* type = (getInput()->get(STR_TYPE))->getString();
 		IBank* bank;
 		IBank* bank1;
 		IBank* bank2;	
@@ -741,17 +817,17 @@ public:
 				if(sorting==1)
 				{
 					std::cout << "Running ORNA-Q and ORNA in single end mode" << std::endl;
-					srting(graph, bank, out_file, base, kmer, nbCores, nodeit);			
+					srting(graph, bank, out_file, base, kmer, nbCores, nodeit, type);			
 				}
 				else if (ksorting==1)
 				{
 					std::cout << "Running ORNA-K in single end mode" << std::endl;
-					ksrting(graph, bank, out_file, base, kmer, nbCores, nodeit, bsize, cs);
+					ksrting(graph, bank, out_file, base, kmer, nbCores, nodeit, bsize, cs, type);
 				}
 				else
 				{
 					std::cout << "Running ORNA in single end mode" << std::endl;
-					singleend(graph, filename, out_file, base, kmer, nbCores, nodeit);
+					singleend(graph, filename, out_file, base, kmer, nbCores, nodeit, type);
 				}
 			}
 			else
@@ -759,7 +835,7 @@ public:
 				if(sorting==0)
 				{
 					std::cout << "Running ORNA in paired end mode" << std::endl;
-					pairedend(read1, read2, out_file, base, kmer);
+					pairedend(read1, read2, out_file, base, kmer, type);
 				}
 				else{
 					std::cout << "Sorting does not work in paired end mode. Please combine the files and run it in single end mode" << std::endl;
