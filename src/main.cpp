@@ -328,7 +328,12 @@ void pairedend(const char* read1, const char* read2, const char* out_file, doubl
         {
             counter[i]=0;
         }
-
+	for (it.first(); !it.isDone(); it.next())
+	{
+		auto idx = graph.nodeMPHFIndex(it.item());				
+		nodeit[idx]=(it.item()).abundance;
+	}
+	
         PairedIterator<Sequence> itPair (bank1->iterator(), bank2->iterator());
         for(itPair.first(); !itPair.isDone(); itPair.next())
         {
