@@ -96,7 +96,8 @@ kmer value: <br />
 This parameter represents the kmer size to be used for reduction. As we aim at preserving all the edge lables ((k+1)-mers) from the original dataset, internally the kmer size given by the user would be incremented by 1. For instance, if the user provides a kmer size of 21, then ORNA would increment the kmer size to 22 for all its calculations. All the analysis in the paper were done using a kmer size of 21 for reads having length of 50bps and 76bps. If you are running an DBG assembly afterwards, we recommend to use the smallest k-mer used in the assembler. Depending on the dataset memory and runtime requirements will change depending on k.
 
 base: <br />
-This parameter represents the base of the logarithm function used to decide the new abundance of kmer. For instance if the original abundance of a kmer is 1000 and a base of 10 is selected as a parameter then the new abundance is set to log<sub>10</sub>1000 = 3. According to the analysis done in ORNA paper, a base of 1.7 seems to be a good compromise between data reduction and little loss in assembly quality.
+This parameter represents the base of the logarithm function used to decide the new abundance of kmer. For instance if the original abundance of a kmer is 1000 and a base of 10 is selected as a parameter then the new abundance is set to log<sub>10</sub>1000 = 3. The higher the base parameter the more reduction of the reads. According to the analysis done in ORNA paper, a base of 1.7 seems to be a good compromise between data reduction and little loss in assembly quality.
+More examples can be found in this [answer](https://github.com/SchulzLab/ORNA/issues/2).
 
 ## Running ORNA
 * To run ORNA, execute the following command from the installation directory
