@@ -114,11 +114,11 @@ More examples can be found in this [answer](https://github.com/SchulzLab/ORNA/is
 ```
 
 ## Citation
-*If you use ORNA in the normal mode (without quality of kmer abundance based sorting) in your work please cite:
+**If you use ORNA in the normal mode (without quality of kmer abundance based sorting) in your work please cite:**
 
 Durai DA, Schulz MH. In-silico read normalization with set multicover optimization. Bioinformatics 2018 [full text](https://doi.org/10.1093/bioinformatics/bty307)
 
-*If you use ORNA-Q/S (with quality or kmer abundance based sorting), please cite:
+**If you use ORNA-Q/S (with quality or kmer abundance based sorting), please cite:**
 
 Durai DA, Schulz MH. Improving in-silico normalization using read weights. Scientific Reports 2019 [full text](https://www.nature.com/articles/s41598-019-41502-9)
 
