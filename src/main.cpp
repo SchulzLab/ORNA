@@ -178,7 +178,7 @@ void singleend(Graph graph, const char* filename, const char* out_file, double b
 		extension=".fa";
 		out_file1=tmpfile+extension;
 		finalout=out_file1.c_str();
-		OutDataset = new BankFasta (finalout, true);
+		OutDataset = new BankFasta (finalout);
 	}
 	
 	//int node_size= it.size();
