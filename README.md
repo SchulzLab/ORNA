@@ -53,7 +53,14 @@ For questions or suggestions regarding ORNA contact
 * Marcel H Schulz (mschulz_at_mmci.uni-saarland.de)
 
 ## Download
-The software can be downloaded by using the following command
+There are two ways how you can access and use ORNA. Either download from github or through bioconda.
+
+If you use bioconda then installation is as easy as:
+```
+  conda install ORNA
+```
+
+Alternatively, the software can be downloaded by using the following command
 ```
 	git clone https://github.com/SchulzLab/ORNA
 ```
@@ -68,11 +75,13 @@ Linux operating system with gcc version >=4.7<br/>
 All the analysis for the manuscript was performed on Debain 8 operating system
 
 ## Installation 
-* Run the following command for installation 
+* Run the following command for installation if you downloaded it from github. 
 ```
   bash install.sh
 ```
 * The above command should create a build folder. The executable of ORNA will be in build/bin 
+
+
 
 ## ORNA parameters
 
