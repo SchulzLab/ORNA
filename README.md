@@ -50,7 +50,7 @@ Version 0.4
 For questions or suggestions regarding ORNA contact
 
 * Dilip A Durai (ddurai_at_mmci.uni-saarland.de)
-* Marcel H Schulz (mschulz_at_mmci.uni-saarland.de)
+* Marcel H Schulz (marcel.schulz_at_em.uni-frankfurt.de)
 
 ## Download
 There are two ways how you can access and use ORNA. Either download from github or through bioconda.
